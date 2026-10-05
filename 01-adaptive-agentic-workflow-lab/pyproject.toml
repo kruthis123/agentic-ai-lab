@@ -1,0 +1,9 @@
+[project]
+name = "01-adaptive-agentic-workflow-lab"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "openai>=3.24.0",
+    "scikit-learn>=1.9.1",
+]
