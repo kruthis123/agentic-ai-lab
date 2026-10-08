@@ -1,0 +1,262 @@
+[
+  {
+    "context_id": "f916c7cb-7070-457f-abc0-93b9fae23127",
+    "source_split": "train",
+    "table": {
+      "uid": "f916c7cb-7070-457f-abc0-93b9fae23127",
+      "table": [
+        [
+          "",
+          "April 26, 2019",
+          "April 26,2018"
+        ],
+        [
+          "Purchased components",
+          "$ 8",
+          "$ 12"
+        ],
+        [
+          "Finished goods",
+          "123",
+          "110"
+        ],
+        [
+          "Inventories",
+          "$ 131",
+          "$ 122"
+        ]
+      ]
+    },
+    "paragraphs": [
+      {
+        "uid": "f5478c6b-75a4-4946-8ceb-6d8a3290fcc6",
+        "order": 1,
+        "text": "6. Supplemental Financial Information"
+      },
+      {
+        "uid": "bc9473a8-b9ef-4b2c-aff0-6465c4ca4f95",
+        "order": 2,
+        "text": "Inventories (in millions):"
+      }
+    ],
+    "context_text": "6. Supplemental Financial Information\n\nInventories (in millions):\n\n | April 26, 2019 | April 26,2018\nPurchased components | $ 8 | $ 12\nFinished goods | 123 | 110\nInventories | $ 131 | $ 122"
+  },
+  {
+    "context_id": "e12a0712-0fcd-475e-8549-d3691d7c01f8",
+    "source_split": "train",
+    "table": {
+      "uid": "e12a0712-0fcd-475e-8549-d3691d7c01f8",
+      "table": [
+        [
+          "",
+          "December 31, 2019",
+          "December 31, 2018"
+        ],
+        [
+          "Accrued compensation and benefits",
+          "$12,227",
+          "$15,283"
+        ],
+        [
+          "Accrued tax liabilities",
+          "4,354",
+          "4,455"
+        ],
+        [
+          "Lease liabilities",
+          "5,109",
+          "—"
+        ],
+        [
+          "Other",
+          "6,066",
+          "5,553"
+        ],
+        [
+          "Total accrued liabilities",
+          "$27,756",
+          "$25,291"
+        ]
+      ]
+    },
+    "paragraphs": [
+      {
+        "uid": "9f29f787-9b3d-4cff-b2ec-22401d281dd3",
+        "order": 1,
+        "text": "Accrued Liabilities"
+      },
+      {
+        "uid": "44073bc9-becd-4bbf-be86-1f0a5bdee21d",
+        "order": 2,
+        "text": "Accrued liabilities consisted of the following (in thousands):"
+      }
+    ],
+    "context_text": "Accrued Liabilities\n\nAccrued liabilities consisted of the following (in thousands):\n\n | December 31, 2019 | December 31, 2018\nAccrued compensation and benefits | $12,227 | $15,283\nAccrued tax liabilities | 4,354 | 4,455\nLease liabilities | 5,109 | —\nOther | 6,066 | 5,553\nTotal accrued liabilities | $27,756 | $25,291"
+  },
+  {
+    "context_id": "71af41cf-6910-491c-861d-c3d70a4853b7",
+    "source_split": "train",
+    "table": {
+      "uid": "71af41cf-6910-491c-861d-c3d70a4853b7",
+      "table": [
+        [
+          "",
+          "Year-ended 31 March 2019",
+          "Year-ended 31 March 2018 Restated See note 2"
+        ],
+        [
+          "Revenue by Product:",
+          "$M",
+          "$M"
+        ],
+        [
+          "Network",
+          "328.5",
+          "316.5"
+        ],
+        [
+          "Enduser",
+          "348.4",
+          "291.8"
+        ],
+        [
+          "Other",
+          "33.7",
+          "30.7"
+        ],
+        [
+          "Total",
+          "710.6",
+          "639.0"
+        ]
+      ]
+    },
+    "paragraphs": [
+      {
+        "uid": "be81a09f-e4f4-4b9e-ad07-e3a71a5528ee",
+        "order": 1,
+        "text": "7 Revenue"
+      },
+      {
+        "uid": "05bd3ed0-97ba-4337-a9d8-c2514355f249",
+        "order": 2,
+        "text": "Revenue recognised in the Consolidated Statement of Profit or Loss is analysed as follows:"
+      }
+    ],
+    "context_text": "7 Revenue\n\nRevenue recognised in the Consolidated Statement of Profit or Loss is analysed as follows:\n\n | Year-ended 31 March 2019 | Year-ended 31 March 2018 Restated See note 2\nRevenue by Product: | $M | $M\nNetwork | 328.5 | 316.5\nEnduser | 348.4 | 291.8\nOther | 33.7 | 30.7\nTotal | 710.6 | 639.0"
+  },
+  {
+    "context_id": "f236fdd6-92a6-4501-bd35-c28104b49dcd",
+    "source_split": "train",
+    "table": {
+      "uid": "f236fdd6-92a6-4501-bd35-c28104b49dcd",
+      "table": [
+        [
+          "",
+          "United States",
+          "Foreign"
+        ],
+        [
+          "",
+          "(in thousands)",
+          ""
+        ],
+        [
+          "2020",
+          "$8,027",
+          "$1,237"
+        ],
+        [
+          "2021",
+          "8,416",
+          "985"
+        ],
+        [
+          "2022",
+          "9,163",
+          "982"
+        ],
+        [
+          "2023",
+          "9,785",
+          "1,258"
+        ],
+        [
+          "2024",
+          "10,558",
+          "1,098"
+        ],
+        [
+          "2025-2029",
+          "59,665",
+          "6,129"
+        ]
+      ]
+    },
+    "paragraphs": [
+      {
+        "uid": "2de90747-4412-4095-98f6-868c19dd2434",
+        "order": 1,
+        "text": "Expected Future Pension Benefit Payments"
+      },
+      {
+        "uid": "a992d8c6-4162-4e13-95fc-2d058f7b5f44",
+        "order": 2,
+        "text": "Future benefit payments are expected to be paid as follows:"
+      }
+    ],
+    "context_text": "Expected Future Pension Benefit Payments\n\nFuture benefit payments are expected to be paid as follows:\n\n | United States | Foreign\n | (in thousands) | \n2020 | $8,027 | $1,237\n2021 | 8,416 | 985\n2022 | 9,163 | 982\n2023 | 9,785 | 1,258\n2024 | 10,558 | 1,098\n2025-2029 | 59,665 | 6,129"
+  },
+  {
+    "context_id": "435ff38e-82de-4b9d-9c1b-0d7ef2857e14",
+    "source_split": "train",
+    "table": {
+      "uid": "435ff38e-82de-4b9d-9c1b-0d7ef2857e14",
+      "table": [
+        [
+          "",
+          "",
+          "Year Ended",
+          ""
+        ],
+        [
+          "",
+          "April 26, 2019",
+          "April 27, 2018",
+          "April 28, 2017"
+        ],
+        [
+          "Domestic",
+          "$ 678",
+          "$ 589",
+          "$ 166"
+        ],
+        [
+          "Foreign",
+          "590",
+          "610",
+          "455"
+        ],
+        [
+          "Total",
+          "$ 1,268",
+          "$ 1,199",
+          "$ 621"
+        ]
+      ]
+    },
+    "paragraphs": [
+      {
+        "uid": "f6f04651-2bf0-46bd-bd1b-58dab8faa2c1",
+        "order": 1,
+        "text": "14. Income Taxes"
+      },
+      {
+        "uid": "a446ae08-8280-40e8-9e69-9384744fd29e",
+        "order": 2,
+        "text": "Income before income taxes is as follows (in millions):"
+      }
+    ],
+    "context_text": "14. Income Taxes\n\nIncome before income taxes is as follows (in millions):\n\n |  | Year Ended | \n | April 26, 2019 | April 27, 2018 | April 28, 2017\nDomestic | $ 678 | $ 589 | $ 166\nForeign | 590 | 610 | 455\nTotal | $ 1,268 | $ 1,199 | $ 621"
+  }
+]

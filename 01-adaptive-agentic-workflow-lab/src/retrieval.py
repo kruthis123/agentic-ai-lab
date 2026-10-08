@@ -39,6 +39,29 @@ def load_markdown_sections(path: Path) -> list[Chunk]:
     return chunks
 
 
+def load_tatqa_chunks(context: dict) -> list[Chunk]:
+    table_text = "\n".join(" | ".join(row) for row in context["table"]["table"])
+
+    # Keep the source heading and unit notes with the table.
+    table_notes = [
+        paragraph["text"]
+        for index, paragraph in enumerate(context["paragraphs"])
+        if index == 0 or re.search(
+            r"\b(thousand|million|billion)s?\b", paragraph["text"], re.IGNORECASE
+        )
+    ]
+    table_text = "\n\n".join(table_notes + [table_text])
+    chunks = [Chunk(chunk_id="table", text=table_text)]
+
+    for paragraph in context["paragraphs"]:
+        chunks.append(Chunk(
+            chunk_id=f"paragraph-{paragraph['order']}",
+            text=paragraph["text"],
+        ))
+
+    return chunks
+
+
 class TfidfRetriever:
     def __init__(self, chunks: list[Chunk]):
         self.chunks = chunks

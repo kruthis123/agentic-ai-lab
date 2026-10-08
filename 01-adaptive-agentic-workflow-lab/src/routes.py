@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import json
 
 from src.model import call_model, ModelResult
-from src.retrieval import retriever
+from src.retrieval import TfidfRetriever, retriever as default_retriever
 
 @dataclass
 class RouterResult:
@@ -13,13 +13,15 @@ class RouterResult:
     output_tokens: int
     latency_ms: float
 
-def choose_route(question: str) -> RouterResult:
+def choose_route(question: str, provided_context: str = "") -> RouterResult:
     prompt = f"""
     Decide which of the following capabilities are required to answer the given question.
 
     needs_retrieval:
-    True only when external policy information not included in the question
-    is required.
+    True only when evidence required to answer the question is missing from
+    both the question and the supplied context. Retrieval searches the selected
+    document. If the supplied context already contains the necessary evidence,
+    set needs_retrieval to false.
 
     needs_reasoning:
     True only when facts must be combined, transformed or calculated rather
@@ -27,6 +29,9 @@ def choose_route(question: str) -> RouterResult:
 
     Question:
     {question}
+
+    Supplied context:
+    {provided_context}
 
     Return only a JSON object with exactly these two keys:
     needs_retrieval and needs_reasoning.
@@ -54,6 +59,8 @@ def execute_route(
     answer_type: str,
     needs_retrieval: bool,
     needs_reasoning: bool,
+    provided_context: str = "",
+    retriever: TfidfRetriever = default_retriever,
 ) -> ModelResult:
     answer_formats = {
         "text": "a JSON string",
@@ -62,11 +69,27 @@ def execute_route(
         "set": "a JSON array of strings",
     }
 
+    if answer_type == "tatqa":
+        output_instruction = """
+        Return only a JSON object with exactly two keys: "answer" and "scale".
+        The answer must be a number, a string, or an array for multiple answers.
+        Infer the scale from the document evidence. Allowed scales are:
+        "", "thousand", "million", "billion", "percent".
+        Use "" for answers with no scale, including non-numeric text.
+        Return numbers in the stated scale without currency symbols or commas.
+        For percentages, return the percentage value with scale "percent".
+        """
+    else:
+        output_instruction = f"""
+        Return only a JSON object with exactly one key named "answer".
+        Its value must be {answer_formats[answer_type]}.
+        """
+
     if needs_retrieval:
         chunks = retriever.retrieve(query=question)
-        context = "\n\n".join(chunk.text for chunk in chunks)
+        retrieved_context = "\n\n".join(chunk.text for chunk in chunks)
     else:
-        context = ""
+        retrieved_context = ""
 
     if needs_reasoning:
         reasoning_instruction = """
@@ -77,21 +100,24 @@ def execute_route(
         reasoning_instruction = ""
 
     prompt = f"""
-    Answer the following question. If reference context is supplied, use only that context for policy facts.
+    Answer the following question. Use the question, supplied context and
+    retrieved context as evidence for document-specific facts.
 
     Question:
     {question}
 
-    Reference context:
-    {context}
+    Supplied context:
+    {provided_context}
+
+    Retrieved context:
+    {retrieved_context}
 
     Additional instruction:
     {reasoning_instruction}
 
     The answer type is: {answer_type}
 
-    Return only a JSON object with exactly one key named "answer".
-    Its value must be {answer_formats[answer_type]}.
+    {output_instruction}
     """
 
     return call_model(prompt)
