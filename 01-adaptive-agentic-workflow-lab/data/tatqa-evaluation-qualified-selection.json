@@ -1,0 +1,382 @@
+{
+  "status": "Refined and retrieval-qualified; pending Task 3 protocol freeze; no model evaluation",
+  "source_selection": "tatqa-evaluation-selection.json",
+  "source_input_sha256": "458e31ad3f77523ef8e77c1724af7aac2673c44881a6b9a0401f5f370bcb2dfa",
+  "scope": "Controlled routing comparison conditional on successful retrieval, not end-to-end evaluation on unfiltered TAT-QA.",
+  "filter_rule": "Apply the five approved refinements, then keep a context only when both questions' required evidence chunks appear in the unchanged TF-IDF retriever's top-2 results.",
+  "sampling": "No new sampling or replacement contexts; retains a qualified subset of the original seed-42 selection.",
+  "original_context_count": 25,
+  "selected_context_count": 19,
+  "input_count": 76,
+  "inputs_per_route": 19,
+  "refinements": [
+    {
+      "id": "E7-arithmetic",
+      "method": "wording_clarification",
+      "original_question_id": "8cb754f8-8411-4846-b6f8-8e2467ce08f3",
+      "selected_question_id": "8cb754f8-8411-4846-b6f8-8e2467ce08f3",
+      "original_question": "How many percent did the weighted average hedged rate for the year change by from 2018 to 2019?",
+      "refined_question": "What is the change in the weighted average hedged rate from 2018 to 2019, in percentage points?",
+      "source_question_text": "How many percent did the weighted average hedged rate for the year change by from 2018 to 2019?",
+      "new_gold_answer": 0.5,
+      "new_gold_scale": "percent"
+    },
+    {
+      "id": "E16-arithmetic",
+      "method": "replacement_with_source_question",
+      "original_question_id": "7e8041b3-4b8c-4e47-8c83-af0b9a6fdb4c",
+      "selected_question_id": "82c155de-a907-4b3f-b89f-1984bd97ddc5",
+      "original_question": "What was the increase / (decrease) in the FCC licenses from 2018 to 2019?",
+      "refined_question": "What is the percentage increase / (decrease) in the total from 2018 to 2019?",
+      "source_question_text": "What is the percentage increase / (decrease) in the total from 2018 to 2019?",
+      "new_gold_answer": 12.67,
+      "new_gold_scale": "percent"
+    },
+    {
+      "id": "E21-lookup",
+      "method": "wording_clarification",
+      "original_question_id": "32185930-8543-45f6-b6f8-28fa25c27a17",
+      "selected_question_id": "32185930-8543-45f6-b6f8-28fa25c27a17",
+      "original_question": "What is the number of freehold investment properties on which the Group has obtained external valuations?",
+      "refined_question": "How many freehold investment properties acquired during the year ended 30 June 2019 did the Group obtain external valuations on?",
+      "source_question_text": "What is the number of freehold investment properties on which the Group has obtained external valuations?",
+      "new_gold_answer": [
+        "31"
+      ],
+      "new_gold_scale": ""
+    },
+    {
+      "id": "E25-lookup",
+      "method": "replacement_with_source_question",
+      "original_question_id": "ea6cb8e6-64e7-4b50-8965-5aeee716adec",
+      "selected_question_id": "d023e08e-4208-4fed-b81f-665840cec045",
+      "original_question": "What was the operating revenues for Q4 2019 for Bell Wireless? ",
+      "refined_question": "What is the percentage change in Bell Wireless operating revenues in Q4 2019 to Q4 2018?",
+      "source_question_text": "What is the percentage change in Bell Wireless operating revenues in Q4 2019 to Q4 2018?",
+      "new_gold_answer": [
+        "3.6%"
+      ],
+      "new_gold_scale": ""
+    },
+    {
+      "id": "E25-arithmetic",
+      "method": "replacement_with_source_question",
+      "original_question_id": "a4308d65-606f-4563-94e1-5ff5c049051a",
+      "selected_question_id": "0d0c77cf-d32c-4b0e-8da0-dcaa3f681f59",
+      "original_question": "What is the sum of the operating revenues for Bell Wireless in Q4 2019 and 2018?",
+      "refined_question": "What is the percentage of Bell Wireless out of the Total BCE operating revenues in Q4 2019?",
+      "source_question_text": "What is the percentage of Bell Wireless out of the Total BCE operating revenues in Q4 2019?",
+      "new_gold_answer": 39.47,
+      "new_gold_scale": "percent"
+    }
+  ],
+  "excluded_contexts": [
+    {
+      "context_id": "b3f4d2dd-a59b-45da-9608-e3401041a2b1",
+      "input_ids": [
+        "E10-lookup-supplied",
+        "E10-lookup-retrieval",
+        "E10-arithmetic-supplied",
+        "E10-arithmetic-retrieval"
+      ],
+      "reason": "At least one required evidence chunk is absent from top-2 retrieval; entire context excluded to preserve four balanced conditions.",
+      "question_checks": [
+        {
+          "id": "E10-lookup",
+          "source_question_id": "57dbf4cc-fcf2-4393-8a27-197dc0b73761",
+          "question": "What were the sales in 2019?",
+          "reference_response": {
+            "answer": 788948,
+            "scale": "thousand"
+          },
+          "verified_basis": "Sales, 2019; paragraph 3 specifies thousands",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-3",
+            "paragraph-2"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        },
+        {
+          "id": "E10-arithmetic",
+          "source_question_id": "6cc73a99-0323-40d5-9d92-b285579b3482",
+          "question": "What was the percentage change in gross profit between 2018 and 2019?",
+          "reference_response": {
+            "answer": -13.66,
+            "scale": "percent"
+          },
+          "verified_basis": "(315652-365607)/365607*100",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-2",
+            "table"
+          ],
+          "evidence_retrieved": true,
+          "warning": null
+        }
+      ]
+    },
+    {
+      "context_id": "26d46b77-411e-47aa-b650-5c84ef3e9e21",
+      "input_ids": [
+        "E13-lookup-supplied",
+        "E13-lookup-retrieval",
+        "E13-arithmetic-supplied",
+        "E13-arithmetic-retrieval"
+      ],
+      "reason": "At least one required evidence chunk is absent from top-2 retrieval; entire context excluded to preserve four balanced conditions.",
+      "question_checks": [
+        {
+          "id": "E13-lookup",
+          "source_question_id": "e4a8a42a-15ef-48b4-b08e-a0fd1193da20",
+          "question": "What was the last fiscal year of expiration for domestic-state tax credit carryforwards? ",
+          "reference_response": {
+            "answer": 2027,
+            "scale": ""
+          },
+          "verified_basis": "Domestic-state tax CREDIT carryforwards, expiration year",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "table",
+            "paragraph-2"
+          ],
+          "evidence_retrieved": true,
+          "warning": null
+        },
+        {
+          "id": "E13-arithmetic",
+          "source_question_id": "fe5839ad-4387-4abb-ae4b-9e61feacd97a",
+          "question": "What was the sum of all Tax credit carryforwards?",
+          "reference_response": {
+            "answer": 58442,
+            "scale": "thousand"
+          },
+          "verified_basis": "39784+3313+15345",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-1",
+            "paragraph-2"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        }
+      ]
+    },
+    {
+      "context_id": "687d09ee-4aa8-402a-ae27-96ce063115a5",
+      "input_ids": [
+        "E15-lookup-supplied",
+        "E15-lookup-retrieval",
+        "E15-arithmetic-supplied",
+        "E15-arithmetic-retrieval"
+      ],
+      "reason": "At least one required evidence chunk is absent from top-2 retrieval; entire context excluded to preserve four balanced conditions.",
+      "question_checks": [
+        {
+          "id": "E15-lookup",
+          "source_question_id": "fbeb392a-39b2-4222-b34a-ab1143b16103",
+          "question": "What is the revenue from the United States in 2018 based on the geographic location of the customer’s headquarters?",
+          "reference_response": {
+            "answer": 17116,
+            "scale": ""
+          },
+          "verified_basis": "United States, customer headquarters, 2018; no table scale provided",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-2",
+            "paragraph-3"
+          ],
+          "evidence_retrieved": false,
+          "warning": "No multiplier is stated; source gold scale is ''. Return the displayed value, without assuming thousands or millions."
+        },
+        {
+          "id": "E15-arithmetic",
+          "source_question_id": "12a99674-3d7b-43b8-acce-98a83bd7c70e",
+          "question": "What is the percentage change of revenue from Hong Kong from 2017 to 2018, based on the geographic location of the customer’s headquarters?",
+          "reference_response": {
+            "answer": 23.23,
+            "scale": "percent"
+          },
+          "verified_basis": "(1761-1429)/1429*100",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-2",
+            "paragraph-3"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        }
+      ]
+    },
+    {
+      "context_id": "b24ee687-2712-4f16-9bc9-0f3f3636e407",
+      "input_ids": [
+        "E19-lookup-supplied",
+        "E19-lookup-retrieval",
+        "E19-arithmetic-supplied",
+        "E19-arithmetic-retrieval"
+      ],
+      "reason": "At least one required evidence chunk is absent from top-2 retrieval; entire context excluded to preserve four balanced conditions.",
+      "question_checks": [
+        {
+          "id": "E19-lookup",
+          "source_question_id": "a3547d53-fd40-4aa1-a8c8-bda48f0520a9",
+          "question": "What was the amount of Cash-settled awards in 2019?",
+          "reference_response": {
+            "answer": 255,
+            "scale": "thousand"
+          },
+          "verified_basis": "Cash-settled awards, 2019; paragraph 1 specifies thousands",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-6",
+            "paragraph-5"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        },
+        {
+          "id": "E19-arithmetic",
+          "source_question_id": "bd8bb8d3-c7e9-4a7f-be23-97b27a29f74e",
+          "question": "What was the percentage change in the total between 2018 and 2019?",
+          "reference_response": {
+            "answer": -4.59,
+            "scale": "percent"
+          },
+          "verified_basis": "(5015-5256)/5256*100",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-6",
+            "paragraph-5"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        }
+      ]
+    },
+    {
+      "context_id": "62425e9b-b7de-4d31-9565-1042ad9e4926",
+      "input_ids": [
+        "E20-lookup-supplied",
+        "E20-lookup-retrieval",
+        "E20-arithmetic-supplied",
+        "E20-arithmetic-retrieval"
+      ],
+      "reason": "At least one required evidence chunk is absent from top-2 retrieval; entire context excluded to preserve four balanced conditions.",
+      "question_checks": [
+        {
+          "id": "E20-lookup",
+          "source_question_id": "e700aa58-2454-4af7-84fe-965254c07275",
+          "question": "What was the State income taxes, net of federal tax benefit in 2020?",
+          "reference_response": {
+            "answer": 22,
+            "scale": "million"
+          },
+          "verified_basis": "State income taxes net of federal benefit; January 3 2020 column",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "table",
+            "paragraph-1"
+          ],
+          "evidence_retrieved": true,
+          "warning": null
+        },
+        {
+          "id": "E20-arithmetic",
+          "source_question_id": "b194279c-16e5-4a17-9733-c8babb6e8281",
+          "question": "What is the average Excess tax benefits from stock-based compensation in 2018 and 2017?",
+          "reference_response": {
+            "answer": -10.5,
+            "scale": "million"
+          },
+          "verified_basis": "(-9-12)/2",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-3",
+            "paragraph-4"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        }
+      ]
+    },
+    {
+      "context_id": "a98c60cd-3990-47d0-9d30-351743be74c7",
+      "input_ids": [
+        "E24-lookup-supplied",
+        "E24-lookup-retrieval",
+        "E24-arithmetic-supplied",
+        "E24-arithmetic-retrieval"
+      ],
+      "reason": "At least one required evidence chunk is absent from top-2 retrieval; entire context excluded to preserve four balanced conditions.",
+      "question_checks": [
+        {
+          "id": "E24-lookup",
+          "source_question_id": "55e21674-161b-4ecc-8e87-96125a4287e6",
+          "question": "What is the total revenue for 2019?",
+          "reference_response": {
+            "answer": 3037000,
+            "scale": ""
+          },
+          "verified_basis": "Total revenue, 2019; dollar value with no stated multiplier",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-9",
+            "paragraph-7"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        },
+        {
+          "id": "E24-arithmetic",
+          "source_question_id": "86f8addb-85de-4f61-86d5-da4b6eca413a",
+          "question": "What is the percentage change of  Total Revenue from 2018 to 2019?",
+          "reference_response": {
+            "answer": -86.26,
+            "scale": "percent"
+          },
+          "verified_basis": "(3037000-22106000)/22106000*100",
+          "reference_exact_match": 1.0,
+          "reference_literal_scale_correct": true,
+          "required_chunk": "table",
+          "retrieved_chunk_ids": [
+            "paragraph-5",
+            "paragraph-6"
+          ],
+          "evidence_retrieved": false,
+          "warning": null
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Retrieval qualification uses source evidence annotations before model runs; gold answers and qualification metadata must never enter router/answer prompts.",
+    "Results must be described as retrieval-qualified; excluded retrieval failures are outside this experiment's scope.",
+    "Successful evidence retrieval does not guarantee correct interpretation or final answers.",
+    "Percentage strings with source scale '' can yield correct EM with response scale percent while literal scale accuracy is false.",
+    "E22 arithmetic uses positive liability magnitudes; E3 and E18 arithmetic remain deliberately easy cases."
+  ]
+}

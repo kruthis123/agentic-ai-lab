@@ -1,0 +1,2497 @@
+{
+  "source": "results/tatqa-evaluation-20261009-122017-244501.jsonl",
+  "scope": "Routing comparison conditional on successful retrieval",
+  "complete": true,
+  "strategies": {
+    "always_complex": {
+      "executions": 228,
+      "inputs": 76,
+      "majority_correct_inputs": 53,
+      "correct_executions": 160,
+      "mean_f1_failure_inclusive": 0.7017543859649122,
+      "literal_scale_correct_executions": 198,
+      "errors": {
+        "none": 160,
+        "wrong_answer": 58,
+        "format_error": 9,
+        "execution_error": 1
+      },
+      "unknown_usage_executions": 1,
+      "observed_latency_executions": 228,
+      "median_observed_latency_ms_failure_inclusive": 10239.174708498467,
+      "inputs_with_variable_correctness": [
+        "E11-arithmetic-retrieval",
+        "E5-arithmetic-retrieval",
+        "E11-arithmetic-supplied"
+      ],
+      "inputs_with_variable_parsed_answer": [
+        "E11-arithmetic-retrieval",
+        "E22-arithmetic-supplied",
+        "E2-arithmetic-retrieval",
+        "E5-arithmetic-retrieval",
+        "E23-arithmetic-supplied",
+        "E11-arithmetic-supplied",
+        "E25-arithmetic-retrieval",
+        "E25-arithmetic-supplied"
+      ],
+      "successes_per_input": {
+        "E9-lookup-retrieval": 3,
+        "E14-arithmetic-retrieval": 3,
+        "E3-lookup-supplied": 3,
+        "E8-arithmetic-supplied": 0,
+        "E14-arithmetic-supplied": 3,
+        "E11-lookup-supplied": 3,
+        "E16-lookup-retrieval": 3,
+        "E4-arithmetic-retrieval": 0,
+        "E12-lookup-supplied": 3,
+        "E11-arithmetic-retrieval": 1,
+        "E8-lookup-retrieval": 3,
+        "E18-lookup-supplied": 3,
+        "E21-lookup-retrieval": 3,
+        "E22-arithmetic-supplied": 0,
+        "E17-lookup-supplied": 3,
+        "E2-arithmetic-retrieval": 0,
+        "E18-arithmetic-retrieval": 3,
+        "E7-lookup-retrieval": 0,
+        "E18-arithmetic-supplied": 3,
+        "E5-arithmetic-supplied": 3,
+        "E22-lookup-supplied": 3,
+        "E5-arithmetic-retrieval": 1,
+        "E6-lookup-supplied": 3,
+        "E17-arithmetic-retrieval": 0,
+        "E16-arithmetic-supplied": 3,
+        "E25-lookup-supplied": 3,
+        "E18-lookup-retrieval": 3,
+        "E22-lookup-retrieval": 3,
+        "E12-arithmetic-supplied": 0,
+        "E16-arithmetic-retrieval": 3,
+        "E6-arithmetic-retrieval": 0,
+        "E1-arithmetic-supplied": 3,
+        "E5-lookup-supplied": 3,
+        "E17-lookup-retrieval": 3,
+        "E6-arithmetic-supplied": 0,
+        "E21-lookup-supplied": 3,
+        "E7-lookup-supplied": 3,
+        "E2-lookup-retrieval": 3,
+        "E2-arithmetic-supplied": 0,
+        "E12-arithmetic-retrieval": 3,
+        "E23-lookup-retrieval": 3,
+        "E3-lookup-retrieval": 3,
+        "E16-lookup-supplied": 3,
+        "E6-lookup-retrieval": 3,
+        "E21-arithmetic-retrieval": 0,
+        "E22-arithmetic-retrieval": 0,
+        "E3-arithmetic-supplied": 0,
+        "E1-lookup-supplied": 3,
+        "E23-arithmetic-supplied": 0,
+        "E11-lookup-retrieval": 3,
+        "E23-arithmetic-retrieval": 0,
+        "E21-arithmetic-supplied": 0,
+        "E7-arithmetic-supplied": 3,
+        "E9-arithmetic-supplied": 3,
+        "E14-lookup-supplied": 3,
+        "E12-lookup-retrieval": 3,
+        "E14-lookup-retrieval": 3,
+        "E4-lookup-supplied": 3,
+        "E25-lookup-retrieval": 3,
+        "E1-lookup-retrieval": 3,
+        "E11-arithmetic-supplied": 2,
+        "E9-lookup-supplied": 3,
+        "E25-arithmetic-retrieval": 0,
+        "E7-arithmetic-retrieval": 3,
+        "E23-lookup-supplied": 3,
+        "E25-arithmetic-supplied": 0,
+        "E2-lookup-supplied": 3,
+        "E17-arithmetic-supplied": 0,
+        "E3-arithmetic-retrieval": 3,
+        "E4-lookup-retrieval": 3,
+        "E5-lookup-retrieval": 3,
+        "E8-lookup-supplied": 3,
+        "E8-arithmetic-retrieval": 0,
+        "E9-arithmetic-retrieval": 3,
+        "E1-arithmetic-retrieval": 3,
+        "E4-arithmetic-supplied": 0
+      }
+    },
+    "adaptive": {
+      "executions": 228,
+      "inputs": 76,
+      "majority_correct_inputs": 51,
+      "correct_executions": 155,
+      "mean_f1_failure_inclusive": 0.6798245614035088,
+      "literal_scale_correct_executions": 192,
+      "errors": {
+        "none": 155,
+        "wrong_answer": 55,
+        "format_error": 12,
+        "execution_error": 6
+      },
+      "unknown_usage_executions": 2,
+      "observed_latency_executions": 228,
+      "median_observed_latency_ms_failure_inclusive": 21294.031729004928,
+      "inputs_with_variable_correctness": [
+        "E7-lookup-retrieval",
+        "E5-arithmetic-retrieval",
+        "E3-arithmetic-supplied",
+        "E11-arithmetic-supplied"
+      ],
+      "inputs_with_variable_parsed_answer": [
+        "E8-arithmetic-supplied",
+        "E5-arithmetic-retrieval",
+        "E6-arithmetic-supplied",
+        "E7-lookup-supplied",
+        "E11-arithmetic-supplied",
+        "E25-arithmetic-retrieval",
+        "E17-arithmetic-supplied"
+      ],
+      "successes_per_input": {
+        "E9-lookup-retrieval": 3,
+        "E14-arithmetic-retrieval": 3,
+        "E3-lookup-supplied": 3,
+        "E8-arithmetic-supplied": 0,
+        "E14-arithmetic-supplied": 0,
+        "E11-lookup-supplied": 3,
+        "E16-lookup-retrieval": 3,
+        "E4-arithmetic-retrieval": 0,
+        "E12-lookup-supplied": 3,
+        "E11-arithmetic-retrieval": 0,
+        "E8-lookup-retrieval": 3,
+        "E18-lookup-supplied": 3,
+        "E21-lookup-retrieval": 3,
+        "E22-arithmetic-supplied": 0,
+        "E17-lookup-supplied": 3,
+        "E2-arithmetic-retrieval": 0,
+        "E18-arithmetic-retrieval": 3,
+        "E7-lookup-retrieval": 1,
+        "E18-arithmetic-supplied": 0,
+        "E5-arithmetic-supplied": 3,
+        "E22-lookup-supplied": 3,
+        "E5-arithmetic-retrieval": 1,
+        "E6-lookup-supplied": 3,
+        "E17-arithmetic-retrieval": 0,
+        "E16-arithmetic-supplied": 3,
+        "E25-lookup-supplied": 3,
+        "E18-lookup-retrieval": 3,
+        "E22-lookup-retrieval": 3,
+        "E12-arithmetic-supplied": 3,
+        "E16-arithmetic-retrieval": 3,
+        "E6-arithmetic-retrieval": 0,
+        "E1-arithmetic-supplied": 0,
+        "E5-lookup-supplied": 3,
+        "E17-lookup-retrieval": 3,
+        "E6-arithmetic-supplied": 0,
+        "E21-lookup-supplied": 3,
+        "E7-lookup-supplied": 3,
+        "E2-lookup-retrieval": 3,
+        "E2-arithmetic-supplied": 0,
+        "E12-arithmetic-retrieval": 3,
+        "E23-lookup-retrieval": 3,
+        "E3-lookup-retrieval": 3,
+        "E16-lookup-supplied": 3,
+        "E6-lookup-retrieval": 3,
+        "E21-arithmetic-retrieval": 0,
+        "E22-arithmetic-retrieval": 0,
+        "E3-arithmetic-supplied": 2,
+        "E1-lookup-supplied": 3,
+        "E23-arithmetic-supplied": 0,
+        "E11-lookup-retrieval": 3,
+        "E23-arithmetic-retrieval": 0,
+        "E21-arithmetic-supplied": 0,
+        "E7-arithmetic-supplied": 3,
+        "E9-arithmetic-supplied": 3,
+        "E14-lookup-supplied": 3,
+        "E12-lookup-retrieval": 3,
+        "E14-lookup-retrieval": 3,
+        "E4-lookup-supplied": 3,
+        "E25-lookup-retrieval": 3,
+        "E1-lookup-retrieval": 3,
+        "E11-arithmetic-supplied": 1,
+        "E9-lookup-supplied": 3,
+        "E25-arithmetic-retrieval": 0,
+        "E7-arithmetic-retrieval": 3,
+        "E23-lookup-supplied": 3,
+        "E25-arithmetic-supplied": 0,
+        "E2-lookup-supplied": 3,
+        "E17-arithmetic-supplied": 0,
+        "E3-arithmetic-retrieval": 3,
+        "E4-lookup-retrieval": 3,
+        "E5-lookup-retrieval": 3,
+        "E8-lookup-supplied": 3,
+        "E8-arithmetic-retrieval": 0,
+        "E9-arithmetic-retrieval": 3,
+        "E1-arithmetic-retrieval": 3,
+        "E4-arithmetic-supplied": 0
+      }
+    }
+  },
+  "paired_known_usage_comparison": {
+    "planned_pairs": 228,
+    "known_usage_pairs": 225,
+    "excluded_unknown_usage_pairs": 3,
+    "strategies": {
+      "always_complex": {
+        "mean_total_tokens": 1093.5644444444445,
+        "median_latency_ms": 9622.191124988603,
+        "mean_execution_tokens": 1093.5644444444445,
+        "median_execution_latency_ms": 9622.191124988603,
+        "mean_router_tokens": 0,
+        "median_router_latency_ms": 0.0
+      },
+      "adaptive": {
+        "mean_total_tokens": 1324.3555555555556,
+        "median_latency_ms": 21136.277332989266,
+        "mean_execution_tokens": 811.7155555555555,
+        "median_execution_latency_ms": 10636.252458003582,
+        "mean_router_tokens": 512.64,
+        "median_router_latency_ms": 6756.850583988125
+      }
+    },
+    "adaptive_reduction_percent": {
+      "mean_total_tokens": -21.10448197941899,
+      "median_latency_ms": -119.66179073390937,
+      "mean_execution_tokens": 25.773413749939046,
+      "median_execution_latency_ms": -10.538777705022774
+    }
+  },
+  "unknown_usage_pairs": [
+    [
+      "E22-arithmetic-retrieval",
+      1
+    ],
+    [
+      "E3-arithmetic-supplied",
+      1
+    ],
+    [
+      "E23-arithmetic-supplied",
+      3
+    ]
+  ],
+  "categories": {
+    "arithmetic-retrieval": {
+      "correctness": {
+        "always_complex": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 8,
+          "correct_executions": 26,
+          "mean_f1_failure_inclusive": 0.45614035087719296,
+          "literal_scale_correct_executions": 47,
+          "errors": {
+            "none": 26,
+            "wrong_answer": 24,
+            "execution_error": 1,
+            "format_error": 6
+          },
+          "unknown_usage_executions": 1,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 23961.54404099798,
+          "inputs_with_variable_correctness": [
+            "E11-arithmetic-retrieval",
+            "E5-arithmetic-retrieval"
+          ],
+          "inputs_with_variable_parsed_answer": [
+            "E11-arithmetic-retrieval",
+            "E2-arithmetic-retrieval",
+            "E5-arithmetic-retrieval",
+            "E25-arithmetic-retrieval"
+          ],
+          "successes_per_input": {
+            "E14-arithmetic-retrieval": 3,
+            "E4-arithmetic-retrieval": 0,
+            "E11-arithmetic-retrieval": 1,
+            "E2-arithmetic-retrieval": 0,
+            "E18-arithmetic-retrieval": 3,
+            "E5-arithmetic-retrieval": 1,
+            "E17-arithmetic-retrieval": 0,
+            "E16-arithmetic-retrieval": 3,
+            "E6-arithmetic-retrieval": 0,
+            "E12-arithmetic-retrieval": 3,
+            "E21-arithmetic-retrieval": 0,
+            "E22-arithmetic-retrieval": 0,
+            "E23-arithmetic-retrieval": 0,
+            "E25-arithmetic-retrieval": 0,
+            "E7-arithmetic-retrieval": 3,
+            "E3-arithmetic-retrieval": 3,
+            "E8-arithmetic-retrieval": 0,
+            "E9-arithmetic-retrieval": 3,
+            "E1-arithmetic-retrieval": 3
+          }
+        },
+        "adaptive": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 8,
+          "correct_executions": 25,
+          "mean_f1_failure_inclusive": 0.43859649122807015,
+          "literal_scale_correct_executions": 46,
+          "errors": {
+            "none": 25,
+            "wrong_answer": 24,
+            "execution_error": 1,
+            "format_error": 7
+          },
+          "unknown_usage_executions": 0,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 29112.45733400574,
+          "inputs_with_variable_correctness": [
+            "E5-arithmetic-retrieval"
+          ],
+          "inputs_with_variable_parsed_answer": [
+            "E5-arithmetic-retrieval",
+            "E25-arithmetic-retrieval"
+          ],
+          "successes_per_input": {
+            "E14-arithmetic-retrieval": 3,
+            "E4-arithmetic-retrieval": 0,
+            "E11-arithmetic-retrieval": 0,
+            "E2-arithmetic-retrieval": 0,
+            "E18-arithmetic-retrieval": 3,
+            "E5-arithmetic-retrieval": 1,
+            "E17-arithmetic-retrieval": 0,
+            "E16-arithmetic-retrieval": 3,
+            "E6-arithmetic-retrieval": 0,
+            "E12-arithmetic-retrieval": 3,
+            "E21-arithmetic-retrieval": 0,
+            "E22-arithmetic-retrieval": 0,
+            "E23-arithmetic-retrieval": 0,
+            "E25-arithmetic-retrieval": 0,
+            "E7-arithmetic-retrieval": 3,
+            "E3-arithmetic-retrieval": 3,
+            "E8-arithmetic-retrieval": 0,
+            "E9-arithmetic-retrieval": 3,
+            "E1-arithmetic-retrieval": 3
+          }
+        }
+      },
+      "paired_comparison": {
+        "planned_pairs": 57,
+        "known_usage_pairs": 56,
+        "excluded_unknown_usage_pairs": 1,
+        "strategies": {
+          "always_complex": {
+            "mean_total_tokens": 803.5714285714286,
+            "median_latency_ms": 23603.302978997817,
+            "mean_execution_tokens": 803.5714285714286,
+            "median_execution_latency_ms": 23603.302978997817,
+            "mean_router_tokens": 0,
+            "median_router_latency_ms": 0.0
+          },
+          "adaptive": {
+            "mean_total_tokens": 1002.625,
+            "median_latency_ms": 28491.457709002134,
+            "mean_execution_tokens": 786.7321428571429,
+            "median_execution_latency_ms": 22855.028625002888,
+            "mean_router_tokens": 215.89285714285714,
+            "median_router_latency_ms": 5577.547833498102
+          }
+        },
+        "adaptive_reduction_percent": {
+          "mean_total_tokens": -24.771111111111114,
+          "median_latency_ms": -20.709621591324694,
+          "mean_execution_tokens": 2.0955555555555496,
+          "median_execution_latency_ms": 3.1702103500545795
+        }
+      }
+    },
+    "arithmetic-supplied": {
+      "correctness": {
+        "always_complex": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 8,
+          "correct_executions": 23,
+          "mean_f1_failure_inclusive": 0.40350877192982454,
+          "literal_scale_correct_executions": 52,
+          "errors": {
+            "wrong_answer": 34,
+            "none": 23
+          },
+          "unknown_usage_executions": 0,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 20759.775041995454,
+          "inputs_with_variable_correctness": [
+            "E11-arithmetic-supplied"
+          ],
+          "inputs_with_variable_parsed_answer": [
+            "E22-arithmetic-supplied",
+            "E23-arithmetic-supplied",
+            "E11-arithmetic-supplied",
+            "E25-arithmetic-supplied"
+          ],
+          "successes_per_input": {
+            "E8-arithmetic-supplied": 0,
+            "E14-arithmetic-supplied": 3,
+            "E22-arithmetic-supplied": 0,
+            "E18-arithmetic-supplied": 3,
+            "E5-arithmetic-supplied": 3,
+            "E16-arithmetic-supplied": 3,
+            "E12-arithmetic-supplied": 0,
+            "E1-arithmetic-supplied": 3,
+            "E6-arithmetic-supplied": 0,
+            "E2-arithmetic-supplied": 0,
+            "E3-arithmetic-supplied": 0,
+            "E23-arithmetic-supplied": 0,
+            "E21-arithmetic-supplied": 0,
+            "E7-arithmetic-supplied": 3,
+            "E9-arithmetic-supplied": 3,
+            "E11-arithmetic-supplied": 2,
+            "E25-arithmetic-supplied": 0,
+            "E17-arithmetic-supplied": 0,
+            "E4-arithmetic-supplied": 0
+          }
+        },
+        "adaptive": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 6,
+          "correct_executions": 18,
+          "mean_f1_failure_inclusive": 0.3157894736842105,
+          "literal_scale_correct_executions": 46,
+          "errors": {
+            "wrong_answer": 31,
+            "format_error": 3,
+            "none": 18,
+            "execution_error": 5
+          },
+          "unknown_usage_executions": 2,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 30006.05495799391,
+          "inputs_with_variable_correctness": [
+            "E3-arithmetic-supplied",
+            "E11-arithmetic-supplied"
+          ],
+          "inputs_with_variable_parsed_answer": [
+            "E8-arithmetic-supplied",
+            "E6-arithmetic-supplied",
+            "E11-arithmetic-supplied",
+            "E17-arithmetic-supplied"
+          ],
+          "successes_per_input": {
+            "E8-arithmetic-supplied": 0,
+            "E14-arithmetic-supplied": 0,
+            "E22-arithmetic-supplied": 0,
+            "E18-arithmetic-supplied": 0,
+            "E5-arithmetic-supplied": 3,
+            "E16-arithmetic-supplied": 3,
+            "E12-arithmetic-supplied": 3,
+            "E1-arithmetic-supplied": 0,
+            "E6-arithmetic-supplied": 0,
+            "E2-arithmetic-supplied": 0,
+            "E3-arithmetic-supplied": 2,
+            "E23-arithmetic-supplied": 0,
+            "E21-arithmetic-supplied": 0,
+            "E7-arithmetic-supplied": 3,
+            "E9-arithmetic-supplied": 3,
+            "E11-arithmetic-supplied": 1,
+            "E25-arithmetic-supplied": 0,
+            "E17-arithmetic-supplied": 0,
+            "E4-arithmetic-supplied": 0
+          }
+        }
+      },
+      "paired_comparison": {
+        "planned_pairs": 57,
+        "known_usage_pairs": 55,
+        "excluded_unknown_usage_pairs": 2,
+        "strategies": {
+          "always_complex": {
+            "mean_total_tokens": 1416.7818181818182,
+            "median_latency_ms": 20759.775041995454,
+            "mean_execution_tokens": 1416.7818181818182,
+            "median_execution_latency_ms": 20759.775041995454,
+            "mean_router_tokens": 0,
+            "median_router_latency_ms": 0.0
+          },
+          "adaptive": {
+            "mean_total_tokens": 1676.509090909091,
+            "median_latency_ms": 28671.414875003393,
+            "mean_execution_tokens": 852.8181818181819,
+            "median_execution_latency_ms": 22120.143374995678,
+            "mean_router_tokens": 823.6909090909091,
+            "median_router_latency_ms": 7095.673292002175
+          }
+        },
+        "adaptive_reduction_percent": {
+          "mean_total_tokens": -18.332199735636465,
+          "median_latency_ms": -38.11043143291914,
+          "mean_execution_tokens": 39.805962296112824,
+          "median_execution_latency_ms": -6.552904982102657
+        }
+      }
+    },
+    "lookup-retrieval": {
+      "correctness": {
+        "always_complex": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 18,
+          "correct_executions": 54,
+          "mean_f1_failure_inclusive": 0.9473684210526315,
+          "literal_scale_correct_executions": 48,
+          "errors": {
+            "none": 54,
+            "format_error": 3
+          },
+          "unknown_usage_executions": 0,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 7167.473541005165,
+          "inputs_with_variable_correctness": [],
+          "inputs_with_variable_parsed_answer": [],
+          "successes_per_input": {
+            "E9-lookup-retrieval": 3,
+            "E16-lookup-retrieval": 3,
+            "E8-lookup-retrieval": 3,
+            "E21-lookup-retrieval": 3,
+            "E7-lookup-retrieval": 0,
+            "E18-lookup-retrieval": 3,
+            "E22-lookup-retrieval": 3,
+            "E17-lookup-retrieval": 3,
+            "E2-lookup-retrieval": 3,
+            "E23-lookup-retrieval": 3,
+            "E3-lookup-retrieval": 3,
+            "E6-lookup-retrieval": 3,
+            "E11-lookup-retrieval": 3,
+            "E12-lookup-retrieval": 3,
+            "E14-lookup-retrieval": 3,
+            "E25-lookup-retrieval": 3,
+            "E1-lookup-retrieval": 3,
+            "E4-lookup-retrieval": 3,
+            "E5-lookup-retrieval": 3
+          }
+        },
+        "adaptive": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 18,
+          "correct_executions": 55,
+          "mean_f1_failure_inclusive": 0.9649122807017544,
+          "literal_scale_correct_executions": 49,
+          "errors": {
+            "none": 55,
+            "format_error": 2
+          },
+          "unknown_usage_executions": 0,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 14736.99674999807,
+          "inputs_with_variable_correctness": [
+            "E7-lookup-retrieval"
+          ],
+          "inputs_with_variable_parsed_answer": [],
+          "successes_per_input": {
+            "E9-lookup-retrieval": 3,
+            "E16-lookup-retrieval": 3,
+            "E8-lookup-retrieval": 3,
+            "E21-lookup-retrieval": 3,
+            "E7-lookup-retrieval": 1,
+            "E18-lookup-retrieval": 3,
+            "E22-lookup-retrieval": 3,
+            "E17-lookup-retrieval": 3,
+            "E2-lookup-retrieval": 3,
+            "E23-lookup-retrieval": 3,
+            "E3-lookup-retrieval": 3,
+            "E6-lookup-retrieval": 3,
+            "E11-lookup-retrieval": 3,
+            "E12-lookup-retrieval": 3,
+            "E14-lookup-retrieval": 3,
+            "E25-lookup-retrieval": 3,
+            "E1-lookup-retrieval": 3,
+            "E4-lookup-retrieval": 3,
+            "E5-lookup-retrieval": 3
+          }
+        }
+      },
+      "paired_comparison": {
+        "planned_pairs": 57,
+        "known_usage_pairs": 57,
+        "excluded_unknown_usage_pairs": 0,
+        "strategies": {
+          "always_complex": {
+            "mean_total_tokens": 781.7894736842105,
+            "median_latency_ms": 7167.473541005165,
+            "mean_execution_tokens": 781.7894736842105,
+            "median_execution_latency_ms": 7167.473541005165,
+            "mean_router_tokens": 0,
+            "median_router_latency_ms": 0.0
+          },
+          "adaptive": {
+            "mean_total_tokens": 962.859649122807,
+            "median_latency_ms": 14736.99674999807,
+            "mean_execution_tokens": 753.1228070175439,
+            "median_execution_latency_ms": 6862.669250011095,
+            "mean_router_tokens": 209.73684210526315,
+            "median_router_latency_ms": 7485.599917010404
+          }
+        },
+        "adaptive_reduction_percent": {
+          "mean_total_tokens": -23.160989183609352,
+          "median_latency_ms": -105.6093638251695,
+          "mean_execution_tokens": 3.6668013105336335,
+          "median_execution_latency_ms": 4.252604341687249
+        }
+      }
+    },
+    "lookup-supplied": {
+      "correctness": {
+        "always_complex": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 19,
+          "correct_executions": 57,
+          "mean_f1_failure_inclusive": 1.0,
+          "literal_scale_correct_executions": 51,
+          "errors": {
+            "none": 57
+          },
+          "unknown_usage_executions": 0,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 6860.879041996668,
+          "inputs_with_variable_correctness": [],
+          "inputs_with_variable_parsed_answer": [],
+          "successes_per_input": {
+            "E3-lookup-supplied": 3,
+            "E11-lookup-supplied": 3,
+            "E12-lookup-supplied": 3,
+            "E18-lookup-supplied": 3,
+            "E17-lookup-supplied": 3,
+            "E22-lookup-supplied": 3,
+            "E6-lookup-supplied": 3,
+            "E25-lookup-supplied": 3,
+            "E5-lookup-supplied": 3,
+            "E21-lookup-supplied": 3,
+            "E7-lookup-supplied": 3,
+            "E16-lookup-supplied": 3,
+            "E1-lookup-supplied": 3,
+            "E14-lookup-supplied": 3,
+            "E4-lookup-supplied": 3,
+            "E9-lookup-supplied": 3,
+            "E23-lookup-supplied": 3,
+            "E2-lookup-supplied": 3,
+            "E8-lookup-supplied": 3
+          }
+        },
+        "adaptive": {
+          "executions": 57,
+          "inputs": 19,
+          "majority_correct_inputs": 19,
+          "correct_executions": 57,
+          "mean_f1_failure_inclusive": 1.0,
+          "literal_scale_correct_executions": 51,
+          "errors": {
+            "none": 57
+          },
+          "unknown_usage_executions": 0,
+          "observed_latency_executions": 57,
+          "median_observed_latency_ms_failure_inclusive": 14427.713291996042,
+          "inputs_with_variable_correctness": [],
+          "inputs_with_variable_parsed_answer": [
+            "E7-lookup-supplied"
+          ],
+          "successes_per_input": {
+            "E3-lookup-supplied": 3,
+            "E11-lookup-supplied": 3,
+            "E12-lookup-supplied": 3,
+            "E18-lookup-supplied": 3,
+            "E17-lookup-supplied": 3,
+            "E22-lookup-supplied": 3,
+            "E6-lookup-supplied": 3,
+            "E25-lookup-supplied": 3,
+            "E5-lookup-supplied": 3,
+            "E21-lookup-supplied": 3,
+            "E7-lookup-supplied": 3,
+            "E16-lookup-supplied": 3,
+            "E1-lookup-supplied": 3,
+            "E14-lookup-supplied": 3,
+            "E4-lookup-supplied": 3,
+            "E9-lookup-supplied": 3,
+            "E23-lookup-supplied": 3,
+            "E2-lookup-supplied": 3,
+            "E8-lookup-supplied": 3
+          }
+        }
+      },
+      "paired_comparison": {
+        "planned_pairs": 57,
+        "known_usage_pairs": 57,
+        "excluded_unknown_usage_pairs": 0,
+        "strategies": {
+          "always_complex": {
+            "mean_total_tokens": 1378.3684210526317,
+            "median_latency_ms": 6860.879041996668,
+            "mean_execution_tokens": 1378.3684210526317,
+            "median_execution_latency_ms": 6860.879041996668,
+            "mean_router_tokens": 0,
+            "median_router_latency_ms": 0.0
+          },
+          "adaptive": {
+            "mean_total_tokens": 1662.140350877193,
+            "median_latency_ms": 14427.713291996042,
+            "mean_execution_tokens": 855.1929824561404,
+            "median_execution_latency_ms": 7168.024041995523,
+            "mean_router_tokens": 806.9473684210526,
+            "median_router_latency_ms": 6960.934874994564
+          }
+        },
+        "adaptive_reduction_percent": {
+          "mean_total_tokens": -20.58752402408135,
+          "median_latency_ms": -110.2895737365639,
+          "mean_execution_tokens": 37.95613934603587,
+          "median_execution_latency_ms": -4.476758708596449
+        }
+      }
+    }
+  },
+  "routing": {
+    "available_decisions": 223,
+    "unavailable_decisions": 5,
+    "matching_decisions": 213,
+    "match_rate_among_available": 0.9551569506726457,
+    "mismatches": [
+      {
+        "id": "E11-arithmetic-retrieval",
+        "repetition": 1,
+        "needs_retrieval": true,
+        "needs_reasoning": false,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": true
+        },
+        "correct": false
+      },
+      {
+        "id": "E21-lookup-retrieval",
+        "repetition": 1,
+        "needs_retrieval": true,
+        "needs_reasoning": true,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": false
+        },
+        "correct": true
+      },
+      {
+        "id": "E17-lookup-supplied",
+        "repetition": 1,
+        "needs_retrieval": true,
+        "needs_reasoning": false,
+        "expected_route": {
+          "needs_retrieval": false,
+          "needs_reasoning": false
+        },
+        "correct": true
+      },
+      {
+        "id": "E25-lookup-retrieval",
+        "repetition": 1,
+        "needs_retrieval": true,
+        "needs_reasoning": true,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": false
+        },
+        "correct": true
+      },
+      {
+        "id": "E11-arithmetic-retrieval",
+        "repetition": 2,
+        "needs_retrieval": true,
+        "needs_reasoning": false,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": true
+        },
+        "correct": false
+      },
+      {
+        "id": "E25-lookup-retrieval",
+        "repetition": 2,
+        "needs_retrieval": true,
+        "needs_reasoning": true,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": false
+        },
+        "correct": true
+      },
+      {
+        "id": "E17-lookup-supplied",
+        "repetition": 2,
+        "needs_retrieval": true,
+        "needs_reasoning": false,
+        "expected_route": {
+          "needs_retrieval": false,
+          "needs_reasoning": false
+        },
+        "correct": true
+      },
+      {
+        "id": "E25-lookup-retrieval",
+        "repetition": 3,
+        "needs_retrieval": true,
+        "needs_reasoning": true,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": false
+        },
+        "correct": true
+      },
+      {
+        "id": "E11-arithmetic-retrieval",
+        "repetition": 3,
+        "needs_retrieval": true,
+        "needs_reasoning": false,
+        "expected_route": {
+          "needs_retrieval": true,
+          "needs_reasoning": true
+        },
+        "correct": false
+      },
+      {
+        "id": "E17-lookup-supplied",
+        "repetition": 3,
+        "needs_retrieval": true,
+        "needs_reasoning": false,
+        "expected_route": {
+          "needs_retrieval": false,
+          "needs_reasoning": false
+        },
+        "correct": true
+      }
+    ],
+    "per_capability": {
+      "needs_retrieval": {
+        "false_positive": 3,
+        "false_negative": 0
+      },
+      "needs_reasoning": {
+        "false_positive": 4,
+        "false_negative": 3
+      }
+    }
+  },
+  "execution_errors": [
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "execution_error": "KeyError: 'needs_retrieval'",
+      "total_tokens": 213
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "execution_error": "KeyError: 'needs_retrieval'",
+      "total_tokens": 390
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "execution_error": "InternalServerError: Error code: 502 - {'error': 'provider request failed'}",
+      "total_tokens": null
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "execution_error": "APITimeoutError: Request timed out.",
+      "total_tokens": null
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "execution_error": "KeyError: 'needs_retrieval'",
+      "total_tokens": 390
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "execution_error": "KeyError: 'needs_retrieval'",
+      "total_tokens": 390
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "execution_error": "APITimeoutError: Request timed out.",
+      "total_tokens": null
+    }
+  ],
+  "failure_counts": {
+    "provider_errors_or_timeouts": 3,
+    "malformed_router_exceptions": 4,
+    "invalid_answer_outputs": 21
+  },
+  "answer_failures": [
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"26.87\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"66.9\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.32\", \"scale\": \"percent\"}",
+      "gold_answer": 0.72,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.83\", \"scale\": \"\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": false
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(17572)\", \"(scale\": \"\" }",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"(17572)\", \"scale\": \"\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3228\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(494)\", \"(scale)\": \"million\"}",
+      "gold_answer": [
+        "(494)"
+      ],
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": false
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(494)\", \"(scale\": \"million\"}",
+      "gold_answer": [
+        "(494)"
+      ],
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"0\", \"scale\": \"\"}",
+      "gold_answer": -27603,
+      "gold_scale": "",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"62.5\", \"scale\": \"percent\"}",
+      "gold_answer": 95.83,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": null,
+      "needs_reasoning": null
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"24.08\", \"scale\": \"percent\"}",
+      "gold_answer": 24.07,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": 16,
+      "gold_scale": "percent",
+      "needs_retrieval": null,
+      "needs_reasoning": null
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"18.34\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"724\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"67\", \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"67\", \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(17572)\", \"(scale)\": \"(17572)\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"2.5\", \"scale\": \"percent\"}",
+      "gold_answer": 0,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": 0,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-27.63\", \"scale\": \"percent\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260273972603\", \"-27.40\": \"-27.40\" }",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260274\", \"-27.397260274\": \"-27.397260274\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260274\", \"-27.397260274\": \"-27.397260274\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": [\"62%\", \"73%\"], \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": [\"62%\", \"73%\"], \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"5.1\", \"scale\": \"percent\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.48\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"49.33\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"49.33\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"724\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.32\", \"scale\": \"percent\"}",
+      "gold_answer": 0.72,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.58\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"0.18\", \"scale\": \"\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.83\", \"scale\": \"\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": false
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"(17572)\", \"scale\": \"\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"(17572)\", \"scale\": \"million\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"2.5\", \"scale\": \"percent\"}",
+      "gold_answer": 0,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"18.34\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"24.08\", \"scale\": \"percent\"}",
+      "gold_answer": 24.07,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"66.9\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"26.87\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"62.5\", \"scale\": \"percent\"}",
+      "gold_answer": 95.83,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": [\"62%\", \"73%\"], \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": [\"62%\", \"73%\"], \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"100.1\", \"scale\": \"million\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(17572)\", \"(scale\": \"\" }",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(17572)\", \"(scale)\": \"(17572)\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.48\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"67\", \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"67\", \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"0\", \"scale\": \"\"}",
+      "gold_answer": -27603,
+      "gold_scale": "",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260273972603\", \"-27.397260273972603\": \"-27.397260273972603\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260274\", \"-27.397260274\": \"-27.397260274\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(494)\", \"(scale\": \"million\"}",
+      "gold_answer": [
+        "(494)"
+      ],
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"27.397260273972605\", \"scale\": \"percent\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260273972603\", \"-27.397260273972603\": \"-27.3972602739726027\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": 16,
+      "gold_scale": "percent",
+      "needs_retrieval": null,
+      "needs_reasoning": null
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3228\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"49.33\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"49.33\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"24.08\", \"scale\": \"percent\"}",
+      "gold_answer": 24.07,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"67\", \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"67\", \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"724\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"(17572)\", \"scale\": \"\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"(17572)\", \"scale\": \"\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"0.18\", \"scale\": \"\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.83\", \"scale\": \"\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": false
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": 16,
+      "gold_scale": "percent",
+      "needs_retrieval": null,
+      "needs_reasoning": null
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"0\", \"scale\": \"\"}",
+      "gold_answer": -27603,
+      "gold_scale": "",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-27.63\", \"scale\": \"percent\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "execution_error",
+      "answer_text": null,
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": null,
+      "needs_reasoning": null
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.6\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"55.58\", \"scale\": \"percent\"}",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260274\", \"-27.397260274\": \"-27.397260274\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-27.397260274\", \"-27.397260274\": \"-27.397260274\"}",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"40\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"40\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"2.5\", \"scale\": \"percent\"}",
+      "gold_answer": 0,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"17.05\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"66.9\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": [\"62%\", \"73%\"], \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": [\"62%\", \"73%\"], \"scale\": \"percent\"}",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.32\", \"scale\": \"percent\"}",
+      "gold_answer": 0.72,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"10.17\", \"scale\": \"percent\"}",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(17572)\", \"(scale\": \"\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(17572)\", \"(scale)\": \"million\"}",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-21.51675463844832\", \"-21.52\": \"-21.52\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"-21.51675463844832\", \"-21.52\": \"-21.52\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"3118\", \"scale\": \"thousand\"}",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"49.33\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"49.33\", \"scale\": \"percent\"}",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"62.5\", \"scale\": \"percent\"}",
+      "gold_answer": 95.83,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"87.5\", \"scale\": \"percent\"}",
+      "gold_answer": 95.83,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(494)\", \"(scale\": \"million\"}",
+      "gold_answer": [
+        "(494)"
+      ],
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "format_error",
+      "answer_text": "{\"answer\": \"(494)\", \"(scale)\": \"million\"}",
+      "gold_answer": [
+        "(494)"
+      ],
+      "gold_scale": "million",
+      "needs_retrieval": true,
+      "needs_reasoning": false
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"5.1\", \"scale\": \"percent\"}",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"39.5\", \"scale\": \"percent\"}",
+      "gold_answer": 39.47,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"1.25\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": false,
+      "needs_reasoning": true
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex",
+      "error_type": "wrong_answer",
+      "answer_text": "{\"answer\": \"-21.52\", \"scale\": \"percent\"}",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "needs_retrieval": true,
+      "needs_reasoning": true
+    }
+  ],
+  "decision": {
+    "additional_incorrect_adaptive_inputs": 2,
+    "correctness_limit_met": false,
+    "overall_cost_success": "inconclusive_unknown_usage",
+    "overall_success_criterion": "not_met_correctness"
+  }
+}

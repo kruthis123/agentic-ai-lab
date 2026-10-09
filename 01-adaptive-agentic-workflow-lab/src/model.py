@@ -10,13 +10,15 @@ load_dotenv()
 @dataclass
 class ModelResult:
     text: str
-    input_tokens: int
-    output_tokens: int
+    input_tokens: int | None
+    output_tokens: int | None
     latency_ms: float
 
 client = OpenAI(
     base_url=os.getenv("BASE_URL"),
-    api_key=os.getenv("API_KEY")
+    api_key=os.getenv("API_KEY"),
+    timeout=90.0,
+    max_retries=0,
 )
 
 def call_model(prompt: str) -> ModelResult:
@@ -33,7 +35,7 @@ def call_model(prompt: str) -> ModelResult:
     latency_ms = (end_time - start_time) * 1000
     return ModelResult(
         text=response.choices[0].message.content,
-        input_tokens=response.usage.prompt_tokens,
-        output_tokens=response.usage.completion_tokens,
+        input_tokens=response.usage.prompt_tokens if response.usage else None,
+        output_tokens=response.usage.completion_tokens if response.usage else None,
         latency_ms=latency_ms
     )

@@ -1,0 +1,176 @@
+{
+  "status": "Selected; pending Task 2 audit and protocol freeze; no model runs",
+  "source_file": "tatqa_dataset_dev.json",
+  "source_sha256": "8da095a819af6db3c14877c6df2d4d29960e41d1a63dd1fa853507bd2a616af5",
+  "seed": 42,
+  "source_context_count": 278,
+  "eligible_context_count": 148,
+  "selected_context_count": 25,
+  "input_count": 100,
+  "eligibility_rules": [
+    "Exclude the development context IDs and identical development tables.",
+    "Lookup: span answer, one finite numeric value, empty derivation.",
+    "Arithmetic: finite numeric int/float answer and nonempty derivation.",
+    "Both questions must use one of the five supported answer scales.",
+    "A context must contain at least one eligible question of each kind."
+  ],
+  "sampling_rule": "Sort contexts/questions by UID; sample contexts without replacement using seed 42; then randomly choose one lookup and one arithmetic question per selected context using the same RNG.",
+  "limitations": [
+    "This is a numeric lookup/arithmetic subset, not the full TAT-QA benchmark.",
+    "100 inputs come from 50 questions in 25 contexts, not 100 independent source questions.",
+    "Unseen in this experiment does not mean unseen during model pretraining.",
+    "Empty derivation is a lookup-label heuristic; Task 2 must verify the required operation, evidence and scoring."
+  ],
+  "selection": [
+    {
+      "id": "E1",
+      "context_id": "2e0e3d40-9bb4-4c64-9f0b-32197d205e4b",
+      "lookup_question_id": "659e3bb7-d175-4125-91a0-76056b63ae4b",
+      "arithmetic_question_id": "0388b022-13e2-4eac-93b3-f6ded1b9fb67"
+    },
+    {
+      "id": "E2",
+      "context_id": "05b0f8ce-bea5-402b-b9e5-8455c9b16e99",
+      "lookup_question_id": "cbef2a9f-9dd9-4f9a-b4f5-50c883e635c4",
+      "arithmetic_question_id": "e02b2c21-3972-41cc-b391-5478da7df9d8"
+    },
+    {
+      "id": "E3",
+      "context_id": "78b73a25-9328-4177-8f82-0da14f052461",
+      "lookup_question_id": "e9493771-ab8c-463a-9e85-31efb748bde8",
+      "arithmetic_question_id": "066fbf2d-e3e7-4f55-bbe0-a71ddeaa2685"
+    },
+    {
+      "id": "E4",
+      "context_id": "6cff0af2-41c0-4b29-b41f-e5637648defa",
+      "lookup_question_id": "9e9b0fb5-0bf6-4bc2-a760-eb4ebac1b460",
+      "arithmetic_question_id": "432de659-987d-46ba-90e9-605428580cd8"
+    },
+    {
+      "id": "E5",
+      "context_id": "6455b0fa-9637-4d36-95d6-2890c7728f54",
+      "lookup_question_id": "9d02baf0-2ce3-46b4-8b72-bef61a900fb9",
+      "arithmetic_question_id": "8ada4c33-1bde-46cf-95ec-dc7938cd7521"
+    },
+    {
+      "id": "E6",
+      "context_id": "3ffd9053-a45d-491c-957a-1b2fa0af0570",
+      "lookup_question_id": "4960801d-277d-4f79-8eca-c4d0200fa9d6",
+      "arithmetic_question_id": "05b670d3-5b19-438c-873f-9bf6de29c69e"
+    },
+    {
+      "id": "E7",
+      "context_id": "2a704bb9-4bd3-4071-b8e6-212957b04ada",
+      "lookup_question_id": "5331e7cb-d216-42b3-8ee8-2d0a877bbe48",
+      "arithmetic_question_id": "8cb754f8-8411-4846-b6f8-8e2467ce08f3"
+    },
+    {
+      "id": "E8",
+      "context_id": "ecbdd061-4537-4633-9431-642c65fe627a",
+      "lookup_question_id": "abda534c-fde6-4155-b854-3070ca1975b5",
+      "arithmetic_question_id": "9cd0120a-2c6d-48a6-b13f-034cf22d6dd1"
+    },
+    {
+      "id": "E9",
+      "context_id": "241e4c9c-5707-477f-b519-a3c5d1af417f",
+      "lookup_question_id": "e0678673-118c-4d95-9204-99c49b881c6d",
+      "arithmetic_question_id": "b2e82e8b-ac83-472d-9514-74937fcde405"
+    },
+    {
+      "id": "E10",
+      "context_id": "b3f4d2dd-a59b-45da-9608-e3401041a2b1",
+      "lookup_question_id": "57dbf4cc-fcf2-4393-8a27-197dc0b73761",
+      "arithmetic_question_id": "6cc73a99-0323-40d5-9d92-b285579b3482"
+    },
+    {
+      "id": "E11",
+      "context_id": "0a75d1da-9beb-4a61-b2f4-06cff98b755e",
+      "lookup_question_id": "c5036e83-ed8b-4267-89bc-2653be0e7ccc",
+      "arithmetic_question_id": "e151e953-f5ab-4041-8e6f-7aec08ed5a60"
+    },
+    {
+      "id": "E12",
+      "context_id": "073a0021-1564-4fe2-8759-73b15dd69ea1",
+      "lookup_question_id": "8ec820df-f01d-4333-b97f-2f23a6826507",
+      "arithmetic_question_id": "cf67e41d-d7f2-4804-97a2-5c81fa266ad3"
+    },
+    {
+      "id": "E13",
+      "context_id": "26d46b77-411e-47aa-b650-5c84ef3e9e21",
+      "lookup_question_id": "e4a8a42a-15ef-48b4-b08e-a0fd1193da20",
+      "arithmetic_question_id": "fe5839ad-4387-4abb-ae4b-9e61feacd97a"
+    },
+    {
+      "id": "E14",
+      "context_id": "5e72a0cd-a892-4d3e-bfa8-403c33aaf40f",
+      "lookup_question_id": "b01cfc26-4c45-4331-868a-432b93e272e9",
+      "arithmetic_question_id": "a8306bab-9758-4e8b-be9a-f797a6601422"
+    },
+    {
+      "id": "E15",
+      "context_id": "687d09ee-4aa8-402a-ae27-96ce063115a5",
+      "lookup_question_id": "fbeb392a-39b2-4222-b34a-ab1143b16103",
+      "arithmetic_question_id": "12a99674-3d7b-43b8-acce-98a83bd7c70e"
+    },
+    {
+      "id": "E16",
+      "context_id": "d9fd4f62-fd62-4254-a96d-70d23f08fc61",
+      "lookup_question_id": "4d32a730-3d41-4884-b4eb-f45496921b34",
+      "arithmetic_question_id": "7e8041b3-4b8c-4e47-8c83-af0b9a6fdb4c"
+    },
+    {
+      "id": "E17",
+      "context_id": "fd7e14ed-efb6-4992-bdc2-b5603d91f126",
+      "lookup_question_id": "04eb80f3-ec41-40c1-8413-9d70059a85ca",
+      "arithmetic_question_id": "87cdfd06-a9ef-48e8-a44e-9addd92a0d0c"
+    },
+    {
+      "id": "E18",
+      "context_id": "502dd70a-926b-49d7-b236-63855c98e740",
+      "lookup_question_id": "3683a97f-66f4-4450-a978-4322b673b914",
+      "arithmetic_question_id": "95497d9b-23d7-4c89-832c-bcf408981985"
+    },
+    {
+      "id": "E19",
+      "context_id": "b24ee687-2712-4f16-9bc9-0f3f3636e407",
+      "lookup_question_id": "a3547d53-fd40-4aa1-a8c8-bda48f0520a9",
+      "arithmetic_question_id": "bd8bb8d3-c7e9-4a7f-be23-97b27a29f74e"
+    },
+    {
+      "id": "E20",
+      "context_id": "62425e9b-b7de-4d31-9565-1042ad9e4926",
+      "lookup_question_id": "e700aa58-2454-4af7-84fe-965254c07275",
+      "arithmetic_question_id": "b194279c-16e5-4a17-9733-c8babb6e8281"
+    },
+    {
+      "id": "E21",
+      "context_id": "c107d7d9-5208-4e97-823c-ec492c4ce75e",
+      "lookup_question_id": "32185930-8543-45f6-b6f8-28fa25c27a17",
+      "arithmetic_question_id": "98b13aba-4ca2-4369-87eb-a960c71b8a2c"
+    },
+    {
+      "id": "E22",
+      "context_id": "861ad987-4b1b-40e0-bef3-1fbd25a33c6b",
+      "lookup_question_id": "41800792-173e-4bbc-921c-2ec9dd9a3e5d",
+      "arithmetic_question_id": "aab66af5-afb9-4f2f-b45b-68f16542760b"
+    },
+    {
+      "id": "E23",
+      "context_id": "f824a6f0-d7fe-43ae-9455-59aaa0854aa3",
+      "lookup_question_id": "dde7c25c-0d33-4f59-99dd-1f5f5cece1f7",
+      "arithmetic_question_id": "f4a95f4d-5957-44e8-81b7-f0cd392c4409"
+    },
+    {
+      "id": "E24",
+      "context_id": "a98c60cd-3990-47d0-9d30-351743be74c7",
+      "lookup_question_id": "55e21674-161b-4ecc-8e87-96125a4287e6",
+      "arithmetic_question_id": "86f8addb-85de-4f61-86d5-da4b6eca413a"
+    },
+    {
+      "id": "E25",
+      "context_id": "bcbd7783-86ad-430d-aa96-48808bb0426c",
+      "lookup_question_id": "ea6cb8e6-64e7-4b50-8965-5aeee716adec",
+      "arithmetic_question_id": "a4308d65-606f-4563-94e1-5ff5c049051a"
+    }
+  ]
+}

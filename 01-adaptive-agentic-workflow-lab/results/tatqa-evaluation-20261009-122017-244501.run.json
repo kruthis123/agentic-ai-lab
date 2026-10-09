@@ -1,0 +1,2337 @@
+{
+  "run_id": "tatqa-evaluation-20261009-122017-244501",
+  "protocol": {
+    "protocol_version": 1,
+    "frozen_date": "2026-10-09",
+    "status": "Protocol frozen before evaluation; Task 4 runner and transport settings not yet implemented",
+    "scope": "Routing comparison conditional on successful retrieval",
+    "inputs_file": "data/tatqa-evaluation-qualified.jsonl",
+    "contexts_file": "data/tatqa-evaluation-qualified-contexts.json",
+    "input_count": 76,
+    "context_count": 19,
+    "source_question_count": 38,
+    "inputs_per_route": 19,
+    "strategies": [
+      "always_complex",
+      "adaptive"
+    ],
+    "repetitions": 3,
+    "planned_strategy_executions": 456,
+    "normal_model_call_count": 684,
+    "seed": 42,
+    "input_order": "Use one random.Random(42) instance; shuffle a fresh copy of inputs each repetition",
+    "strategy_order": "For zero-based shuffled position i and zero-based repetition r, always_complex first if (i+r)%2==0; adaptive first otherwise",
+    "model": "gemma4:26b",
+    "provider_base_url": "https://soclaas-api.comp.nus.edu.sg/v1/",
+    "temperature": 0,
+    "response_format": {
+      "type": "json_object"
+    },
+    "retrieval_top_k": 2,
+    "request_timeout_seconds": 90,
+    "max_retries": 0,
+    "input_correct_if_successes_at_least": 2,
+    "minimum_token_reduction_percent": 10,
+    "minimum_latency_reduction_percent": 10,
+    "maximum_additional_incorrect_inputs": 1,
+    "unknown_usage": null,
+    "notes_file": "notes/04-evaluation-protocol.md",
+    "sha256": {
+      "data/tatqa-evaluation-qualified.jsonl": "13394fac887abca5fdeac40ba954e1181f574109e44221be5eb46579bb67ab76",
+      "data/tatqa-evaluation-qualified-contexts.json": "d39885acc87095f477ce2caf006c27695a18c45eb2eee5da39d0085d76eca8c7",
+      "src/routes.py": "ca42e6da108f494c42be53a4f6c8dc5db45dcfa4ae10d53daf7204e4642948e3",
+      "src/retrieval.py": "92c7ea076e1d1c65e20c6eec3a1250fa51db87839063919af55cbded9c89efc3",
+      "src/tatqa_scoring.py": "6fbc72ea609e0b0f81d147d9648a18010a849133fefbd98fe21dcd4f64b965a5",
+      "src/tatqa_metrics.py": "9df263c0f13c7e07b33492fe257d3008233e3bc7f4eab91bcf6a811acbcd4ed7",
+      "src/tatqa_utils.py": "61348c9415cf466e38feaaf9f3420aa14725b9f55beccc6e18238ff8800dc892"
+    }
+  },
+  "sha256": {
+    "data/tatqa-evaluation-protocol.json": "a963a95b66a4d6bbecd017da56ad2824cb3c3a09c9ba0d69e7386bf0e012cb63",
+    "src/model.py": "3c24d944f5b6b5754ba53091070919e8953ad5f571b9e60514f3ce1c7e58704f",
+    "src/strategies.py": "40a1c5c35c410ef3515f84b059d8a50d7f240879017936236a60d5171a0fb215",
+    "src/run_tatqa_evaluation.py": "77a66d1a0092646979631e64505d2b696474218e384ca374638b31d357f76a81"
+  },
+  "schedule": [
+    {
+      "id": "E9-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E14-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E14-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-lookup-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-lookup-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-arithmetic-retrieval",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 1,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E4-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E4-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E17-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-lookup-retrieval",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-supplied",
+      "repetition": 2,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E14-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E11-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E7-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E18-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E21-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E23-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E3-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E22-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E23-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E5-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E8-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E12-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E3-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E9-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E21-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E14-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E16-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E2-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E16-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E17-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E6-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E18-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E2-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E1-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E8-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E12-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E1-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E14-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E5-arithmetic-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E7-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E25-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E11-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E4-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E25-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E6-arithmetic-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-lookup-supplied",
+      "repetition": 3,
+      "strategy": "always_complex"
+    },
+    {
+      "id": "E22-lookup-supplied",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "adaptive"
+    },
+    {
+      "id": "E9-lookup-retrieval",
+      "repetition": 3,
+      "strategy": "always_complex"
+    }
+  ]
+}

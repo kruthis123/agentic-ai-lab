@@ -1,0 +1,1285 @@
+{
+  "status": "Audit complete; selection needs resolution before protocol freeze",
+  "review_method": "Assistant source review of all 25 selected tables/paragraph sets; literal calculations and reference-response scoring checked in code. No model evaluation calls.",
+  "input_sha256": "458e31ad3f77523ef8e77c1724af7aac2673c44881a6b9a0401f5f370bcb2dfa",
+  "source_questions_reviewed": 50,
+  "variants_checked": 100,
+  "gold_calculations_match_source_derivations": 25,
+  "reference_responses_pass_official_em": 50,
+  "blocking_question_count": 5,
+  "blocking_variant_count": 10,
+  "retrieval_evidence_misses": [
+    "E10-lookup-retrieval",
+    "E13-arithmetic-retrieval",
+    "E15-lookup-retrieval",
+    "E15-arithmetic-retrieval",
+    "E19-lookup-retrieval",
+    "E19-arithmetic-retrieval",
+    "E20-arithmetic-retrieval",
+    "E24-lookup-retrieval",
+    "E24-arithmetic-retrieval",
+    "E25-lookup-retrieval",
+    "E25-arithmetic-retrieval"
+  ],
+  "retrieval_miss_count": 11,
+  "selection_changed": false,
+  "interpretation": [
+    "Gold arithmetic matching a derivation does not resolve ambiguous wording, missing units, or a precomputed answer in the context.",
+    "Retrieval misses are pipeline outcomes, not invalid dataset examples. Do not remove them to improve results.",
+    "Current table chunks retain necessary headers/units when retrieved; paragraph-based E21 lookup needs paragraph 2 instead of the table.",
+    "Keep expected labels distinct from empirically optimal routes; direct models may calculate, and some arithmetic is trivial.",
+    "No evaluation examples, gold annotations, prompts or retriever settings were changed by this audit."
+  ],
+  "questions": [
+    {
+      "id": "E1-lookup",
+      "source_question_id": "659e3bb7-d175-4125-91a0-76056b63ae4b",
+      "question": "What was the Deferred compensation plan assets in 2018?",
+      "gold_answer": [
+        "31"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Deferred compensation plan assets, April 27 2018",
+      "verified_value": 31,
+      "reference_response": {
+        "answer": 31,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E1-arithmetic",
+      "source_question_id": "0388b022-13e2-4eac-93b3-f6ded1b9fb67",
+      "question": "What was the percentage change in Other long-term liabilities between 2018 and 2019?",
+      "gold_answer": 16,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(29-25)/25*100",
+      "verified_value": 16,
+      "reference_response": {
+        "answer": 16,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E2-lookup",
+      "source_question_id": "cbef2a9f-9dd9-4f9a-b4f5-50c883e635c4",
+      "question": "What was the number of shares purchased from the first month?",
+      "gold_answer": [
+        "262"
+      ],
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Shares purchased, January 26-February 22 2019; shares in thousands",
+      "verified_value": 262,
+      "reference_response": {
+        "answer": 262,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E2-arithmetic",
+      "source_question_id": "e02b2c21-3972-41cc-b391-5478da7df9d8",
+      "question": "What was the change in the total number of shares purchased between the second to third month period?",
+      "gold_answer": 228,
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "3608-3380",
+      "verified_value": 228,
+      "reference_response": {
+        "answer": 228,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E3-lookup",
+      "source_question_id": "e9493771-ab8c-463a-9e85-31efb748bde8",
+      "question": "What is the discount rate in 2019?",
+      "gold_answer": [
+        "2.9"
+      ],
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Discount rate, 2019; column units %",
+      "verified_value": 2.9,
+      "reference_response": {
+        "answer": 2.9,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-1"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E3-arithmetic",
+      "source_question_id": "066fbf2d-e3e7-4f55-bbe0-a71ddeaa2685",
+      "question": "What is the change in expected rate of salary increase between 2018 and 2019?",
+      "gold_answer": 0,
+      "gold_scale": "percent",
+      "status": "pass_with_warning",
+      "blocking_issue": null,
+      "warning": "Zero-change calculation: equal rates make this very easy. Keep visible; an operation label does not prove extra reasoning is beneficial.",
+      "verified_basis": "2.5-2.5",
+      "verified_value": 0,
+      "reference_response": {
+        "answer": 0,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E4-lookup",
+      "source_question_id": "9e9b0fb5-0bf6-4bc2-a760-eb4ebac1b460",
+      "question": "What was the net sales from Romania in 2019?",
+      "gold_answer": [
+        "195,837"
+      ],
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Romania net sales, 2019; paragraph 3 specifies thousands",
+      "verified_value": 195837,
+      "reference_response": {
+        "answer": 195837,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-3",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E4-arithmetic",
+      "source_question_id": "432de659-987d-46ba-90e9-605428580cd8",
+      "question": "What was the percentage change in the net sales from Germany between 2018 and 2019?",
+      "gold_answer": 10.18,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(14271-12953)/12953*100",
+      "verified_value": 10.18,
+      "reference_response": {
+        "answer": 10.18,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-3",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E5-lookup",
+      "source_question_id": "9d02baf0-2ce3-46b4-8b72-bef61a900fb9",
+      "question": "What was the  Interest cost  in 2018?",
+      "gold_answer": [
+        "1,230"
+      ],
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Interest cost, fiscal 2018; paragraph 6 specifies thousands",
+      "verified_value": 1230,
+      "reference_response": {
+        "answer": 1230,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-6"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E5-arithmetic",
+      "source_question_id": "8ada4c33-1bde-46cf-95ec-dc7938cd7521",
+      "question": "What was the percentage change in Recognized net actuarial (gain) loss in 2019 from 2018?",
+      "gold_answer": 95.83,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(470-240)/240*100",
+      "verified_value": 95.83,
+      "reference_response": {
+        "answer": 95.83,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-6"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E6-lookup",
+      "source_question_id": "4960801d-277d-4f79-8eca-c4d0200fa9d6",
+      "question": "What is the amount of total sales in 2019?",
+      "gold_answer": [
+        "$1,496.5"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Total sales, 2019; paragraph 2 specifies millions",
+      "verified_value": 1496.5,
+      "reference_response": {
+        "answer": 1496.5,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E6-arithmetic",
+      "source_question_id": "05b670d3-5b19-438c-873f-9bf6de29c69e",
+      "question": "What is the percentage change in Other in 2019 from 2018?",
+      "gold_answer": -22.22,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(44.1-56.7)/56.7*100",
+      "verified_value": -22.22,
+      "reference_response": {
+        "answer": -22.22,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E7-lookup",
+      "source_question_id": "5331e7cb-d216-42b3-8ee8-2d0a877bbe48",
+      "question": "What is the 2019 carrying amount of interest rate swaps?",
+      "gold_answer": [
+        "(494)"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "2019 carrying amount (494); RMB Million column",
+      "verified_value": -494,
+      "reference_response": {
+        "answer": -494,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-7"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E7-arithmetic",
+      "source_question_id": "8cb754f8-8411-4846-b6f8-8e2467ce08f3",
+      "question": "How many percent did the weighted average hedged rate for the year change by from 2018 to 2019?",
+      "gold_answer": 0.5,
+      "gold_scale": "percent",
+      "status": "needs_resolution",
+      "blocking_issue": "Wording asks percent change. Gold 0.5 is a percentage-point difference; relative change is 31.25%. Replace with an unambiguous source arithmetic question or explicitly clarify the derived question.",
+      "warning": null,
+      "verified_basis": "2.10-1.60",
+      "verified_value": 0.5,
+      "reference_response": {
+        "answer": 0.5,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-4"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E8-lookup",
+      "source_question_id": "abda534c-fde6-4155-b854-3070ca1975b5",
+      "question": "What was the operating income (GAAP) in 2018?",
+      "gold_answer": [
+        "112,852"
+      ],
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Operating income GAAP, 2018; paragraph 1 specifies thousands",
+      "verified_value": 112852,
+      "reference_response": {
+        "answer": 112852,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-1",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E8-arithmetic",
+      "source_question_id": "9cd0120a-2c6d-48a6-b13f-034cf22d6dd1",
+      "question": "What was the percentage change in the Adjusted operating income (non-GAAP) between 2018 and 2019?",
+      "gold_answer": 66.94,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(237235-142105)/142105*100",
+      "verified_value": 66.94,
+      "reference_response": {
+        "answer": 66.94,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-1",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E9-lookup",
+      "source_question_id": "e0678673-118c-4d95-9204-99c49b881c6d",
+      "question": "What was the revenue for the quarter ended July 27, 2019?",
+      "gold_answer": [
+        "13,428"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Revenue, July 27 2019; paragraph 2 specifies millions",
+      "verified_value": 13428,
+      "reference_response": {
+        "answer": 13428,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-3",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E9-arithmetic",
+      "source_question_id": "b2e82e8b-ac83-472d-9514-74937fcde405",
+      "question": "What was the change in net income between quarters ended January 26 and April 27, 2019?",
+      "gold_answer": 222,
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "3044-2822",
+      "verified_value": 222,
+      "reference_response": {
+        "answer": 222,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E10-lookup",
+      "source_question_id": "57dbf4cc-fcf2-4393-8a27-197dc0b73761",
+      "question": "What were the sales in 2019?",
+      "gold_answer": [
+        "$788,948"
+      ],
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Sales, 2019; paragraph 3 specifies thousands",
+      "verified_value": 788948,
+      "reference_response": {
+        "answer": 788948,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-3",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E10-arithmetic",
+      "source_question_id": "6cc73a99-0323-40d5-9d92-b285579b3482",
+      "question": "What was the percentage change in gross profit between 2018 and 2019?",
+      "gold_answer": -13.66,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(315652-365607)/365607*100",
+      "verified_value": -13.66,
+      "reference_response": {
+        "answer": -13.66,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-2",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E11-lookup",
+      "source_question_id": "c5036e83-ed8b-4267-89bc-2653be0e7ccc",
+      "question": "What is the revised Total liabilities as of December 31, 2019?",
+      "gold_answer": [
+        "$ 100.1"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Total liabilities, revised December 31 2019; table units millions",
+      "verified_value": 100.1,
+      "reference_response": {
+        "answer": 100.1,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-6"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E11-arithmetic",
+      "source_question_id": "e151e953-f5ab-4041-8e6f-7aec08ed5a60",
+      "question": "What is the liability to asset ratio as of December 31, 2019?",
+      "gold_answer": 18.34,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "100.1/545.8*100",
+      "verified_value": 18.34,
+      "reference_response": {
+        "answer": 18.34,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-1"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E12-lookup",
+      "source_question_id": "8ec820df-f01d-4333-b97f-2f23a6826507",
+      "question": "What was the gross margin in the fiscal 2019 second quarter?",
+      "gold_answer": [
+        "41.5%"
+      ],
+      "gold_scale": "",
+      "status": "pass_with_warning",
+      "blocking_issue": null,
+      "warning": "Gold stores 41.5% with scale ''. The valid numeric response 41.5 with scale percent has EM=1 but literal scale_correct=False. Do not call this a unit error or override official scores.",
+      "verified_basis": "Gross margin, fiscal 2019 second quarter, 41.5%",
+      "verified_value": 41.5,
+      "reference_response": {
+        "answer": 41.5,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": false,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E12-arithmetic",
+      "source_question_id": "cf67e41d-d7f2-4804-97a2-5c81fa266ad3",
+      "question": "How much is the Revenue in the first quarter of Fiscal 2018 as a percentage of the total revenue that year?",
+      "gold_answer": 24.07,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "88081/365912*100",
+      "verified_value": 24.07,
+      "reference_response": {
+        "answer": 24.07,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E13-lookup",
+      "source_question_id": "e4a8a42a-15ef-48b4-b08e-a0fd1193da20",
+      "question": "What was the last fiscal year of expiration for domestic-state tax credit carryforwards? ",
+      "gold_answer": [
+        "2027"
+      ],
+      "gold_scale": "",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Domestic-state tax CREDIT carryforwards, expiration year",
+      "verified_value": 2027,
+      "reference_response": {
+        "answer": 2027,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E13-arithmetic",
+      "source_question_id": "fe5839ad-4387-4abb-ae4b-9e61feacd97a",
+      "question": "What was the sum of all Tax credit carryforwards?",
+      "gold_answer": 58442,
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "39784+3313+15345",
+      "verified_value": 58442,
+      "reference_response": {
+        "answer": 58442,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-1",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E14-lookup",
+      "source_question_id": "b01cfc26-4c45-4331-868a-432b93e272e9",
+      "question": "What is the Accounts receivable, net as reported as of March 29, 2019?",
+      "gold_answer": [
+        "$708"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Accounts receivable net, as reported; table units millions",
+      "verified_value": 708,
+      "reference_response": {
+        "answer": 708,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-4",
+        "table"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E14-arithmetic",
+      "source_question_id": "a8306bab-9758-4e8b-be9a-f797a6601422",
+      "question": "What is the percentage increase in Total assets after adoption of new standard?",
+      "gold_answer": 0.72,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "114/15824*100",
+      "verified_value": 0.72,
+      "reference_response": {
+        "answer": 0.72,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E15-lookup",
+      "source_question_id": "fbeb392a-39b2-4222-b34a-ab1143b16103",
+      "question": "What is the revenue from the United States in 2018 based on the geographic location of the customer’s headquarters?",
+      "gold_answer": [
+        "$17,116"
+      ],
+      "gold_scale": "",
+      "status": "pass_with_warning",
+      "blocking_issue": null,
+      "warning": "No multiplier is stated; source gold scale is ''. Return the displayed value, without assuming thousands or millions.",
+      "verified_basis": "United States, customer headquarters, 2018; no table scale provided",
+      "verified_value": 17116,
+      "reference_response": {
+        "answer": 17116,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-2",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E15-arithmetic",
+      "source_question_id": "12a99674-3d7b-43b8-acce-98a83bd7c70e",
+      "question": "What is the percentage change of revenue from Hong Kong from 2017 to 2018, based on the geographic location of the customer’s headquarters?",
+      "gold_answer": 23.23,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(1761-1429)/1429*100",
+      "verified_value": 23.23,
+      "reference_response": {
+        "answer": 23.23,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-2",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E16-lookup",
+      "source_question_id": "4d32a730-3d41-4884-b4eb-f45496921b34",
+      "question": "What was the state licenses in 2018?",
+      "gold_answer": [
+        "2.5"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "State licenses, 2018; paragraph 2 specifies millions",
+      "verified_value": 2.5,
+      "reference_response": {
+        "answer": 2.5,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E16-arithmetic",
+      "source_question_id": "7e8041b3-4b8c-4e47-8c83-af0b9a6fdb4c",
+      "question": "What was the increase / (decrease) in the FCC licenses from 2018 to 2019?",
+      "gold_answer": 15.6,
+      "gold_scale": "million",
+      "status": "needs_resolution",
+      "blocking_issue": "Paragraph 4 explicitly says FCC licenses increased 15.6 million. The supplied-context variant can be answered by extraction; the arithmetic route label is not justified for this full context.",
+      "warning": null,
+      "verified_basis": "136.2-120.6",
+      "verified_value": 15.6,
+      "reference_response": {
+        "answer": 15.6,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E17-lookup",
+      "source_question_id": "04eb80f3-ec41-40c1-8413-9d70059a85ca",
+      "question": "What is total basic earnings per share (cents per share)  for 2019?",
+      "gold_answer": [
+        "206.2"
+      ],
+      "gold_scale": "",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Basic EPS total, 2019, cents per share (not millions)",
+      "verified_value": 206.2,
+      "reference_response": {
+        "answer": 206.2,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-1"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E17-arithmetic",
+      "source_question_id": "87cdfd06-a9ef-48e8-a44e-9addd92a0d0c",
+      "question": "What is the percentage constitution of continuing operations in diluted earnings per share in 2019?",
+      "gold_answer": 55.44,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "113.6/204.9*100",
+      "verified_value": 55.44,
+      "reference_response": {
+        "answer": 55.44,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-4"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E18-lookup",
+      "source_question_id": "3683a97f-66f4-4450-a978-4322b673b914",
+      "question": "What is the total gross emissions (Scope 1 and 2) for FY19?",
+      "gold_answer": [
+        "87,128"
+      ],
+      "gold_scale": "",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Total gross emissions, FY19, tonnes CO2e",
+      "verified_value": 87128,
+      "reference_response": {
+        "answer": 87128,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E18-arithmetic",
+      "source_question_id": "95497d9b-23d7-4c89-832c-bcf408981985",
+      "question": "What is the change in the Green tariff from FY18 to FY19 for UK and Ireland only?",
+      "gold_answer": -27603,
+      "gold_scale": "",
+      "status": "pass_with_warning",
+      "blocking_issue": null,
+      "warning": "Subtracting a zero baseline gives a change equal to the displayed FY19 amount; this is a weak reasoning-demand example, not an invalid gold answer.",
+      "verified_basis": "-27603-0",
+      "verified_value": -27603,
+      "reference_response": {
+        "answer": -27603,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E19-lookup",
+      "source_question_id": "a3547d53-fd40-4aa1-a8c8-bda48f0520a9",
+      "question": "What was the amount of Cash-settled awards in 2019?",
+      "gold_answer": [
+        "255"
+      ],
+      "gold_scale": "thousand",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Cash-settled awards, 2019; paragraph 1 specifies thousands",
+      "verified_value": 255,
+      "reference_response": {
+        "answer": 255,
+        "scale": "thousand"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-6",
+        "paragraph-5"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E19-arithmetic",
+      "source_question_id": "bd8bb8d3-c7e9-4a7f-be23-97b27a29f74e",
+      "question": "What was the percentage change in the total between 2018 and 2019?",
+      "gold_answer": -4.59,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(5015-5256)/5256*100",
+      "verified_value": -4.59,
+      "reference_response": {
+        "answer": -4.59,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-6",
+        "paragraph-5"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E20-lookup",
+      "source_question_id": "e700aa58-2454-4af7-84fe-965254c07275",
+      "question": "What was the State income taxes, net of federal tax benefit in 2020?",
+      "gold_answer": [
+        "22"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "State income taxes net of federal benefit; January 3 2020 column",
+      "verified_value": 22,
+      "reference_response": {
+        "answer": 22,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-1"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E20-arithmetic",
+      "source_question_id": "b194279c-16e5-4a17-9733-c8babb6e8281",
+      "question": "What is the average Excess tax benefits from stock-based compensation in 2018 and 2017?",
+      "gold_answer": -10.5,
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(-9-12)/2",
+      "verified_value": -10.5,
+      "reference_response": {
+        "answer": -10.5,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-3",
+        "paragraph-4"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E21-lookup",
+      "source_question_id": "32185930-8543-45f6-b6f8-28fa25c27a17",
+      "question": "What is the number of freehold investment properties on which the Group has obtained external valuations?",
+      "gold_answer": [
+        "31"
+      ],
+      "gold_scale": "",
+      "status": "needs_resolution",
+      "blocking_issue": "Question omits year; paragraph 2 gives 31 properties in 2019 and 19 in 2018. Gold assumes 2019 and refers to newly acquired properties. Clarify scope/date or replace the question/context.",
+      "warning": null,
+      "verified_basis": "Paragraph 2: 31 properties acquired in year ended June 30 2019; also 19 in 2018",
+      "verified_value": 31,
+      "reference_response": {
+        "answer": 31,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-2",
+        "paragraph-1"
+      ],
+      "required_chunk": "paragraph-2",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E21-arithmetic",
+      "source_question_id": "98b13aba-4ca2-4369-87eb-a960c71b8a2c",
+      "question": "What is the average freehold internal valuation for 2018 and 2019?",
+      "gold_answer": 67.5,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(62+73)/2",
+      "verified_value": 67.5,
+      "reference_response": {
+        "answer": 67.5,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-2"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E22-lookup",
+      "source_question_id": "41800792-173e-4bbc-921c-2ec9dd9a3e5d",
+      "question": "What was the amount of USD denominated current monetary assets as at 31 December 2019?",
+      "gold_answer": [
+        "27,728"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "USD current monetary assets, December 31 2019; RMB Million column",
+      "verified_value": 27728,
+      "reference_response": {
+        "answer": 27728,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-4"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E22-arithmetic",
+      "source_question_id": "aab66af5-afb9-4f2f-b45b-68f16542760b",
+      "question": "What was the total non-USD denominated monetary liabilities as at 31 December 2019?",
+      "gold_answer": 20471,
+      "gold_scale": "million",
+      "status": "pass_with_warning",
+      "blocking_issue": null,
+      "warning": "Gold sums positive liability magnitudes. The table shows negative signed liabilities; a signed sum would be -20471. Document this convention or use an unambiguous assets-sum question.",
+      "verified_basis": "14732+5739 (liability magnitudes)",
+      "verified_value": 20471,
+      "reference_response": {
+        "answer": 20471,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-4"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E23-lookup",
+      "source_question_id": "dde7c25c-0d33-4f59-99dd-1f5f5cece1f7",
+      "question": "How much were the gains reclassified from accumulated other comprehensive income (loss) into revenue in 2018?",
+      "gold_answer": [
+        "185"
+      ],
+      "gold_scale": "million",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Gains reclassified into revenue, 2018; table units millions",
+      "verified_value": 185,
+      "reference_response": {
+        "answer": 185,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E23-arithmetic",
+      "source_question_id": "f4a95f4d-5957-44e8-81b7-f0cd392c4409",
+      "question": "What was the % change in gains recognized in other comprehensive income (loss), net of tax of $1, $11, and $4 from 2018 to 2019?",
+      "gold_answer": -27.4,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(159-219)/219*100",
+      "verified_value": -27.4,
+      "reference_response": {
+        "answer": -27.4,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "table",
+        "paragraph-3"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": true
+    },
+    {
+      "id": "E24-lookup",
+      "source_question_id": "55e21674-161b-4ecc-8e87-96125a4287e6",
+      "question": "What is the total revenue for 2019?",
+      "gold_answer": [
+        "$3,037,000"
+      ],
+      "gold_scale": "",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "Total revenue, 2019; dollar value with no stated multiplier",
+      "verified_value": 3037000,
+      "reference_response": {
+        "answer": 3037000,
+        "scale": ""
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-9",
+        "paragraph-7"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E24-arithmetic",
+      "source_question_id": "86f8addb-85de-4f61-86d5-da4b6eca413a",
+      "question": "What is the percentage change of  Total Revenue from 2018 to 2019?",
+      "gold_answer": -86.26,
+      "gold_scale": "percent",
+      "status": "pass",
+      "blocking_issue": null,
+      "warning": null,
+      "verified_basis": "(3037000-22106000)/22106000*100",
+      "verified_value": -86.26,
+      "reference_response": {
+        "answer": -86.26,
+        "scale": "percent"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-5",
+        "paragraph-6"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E25-lookup",
+      "source_question_id": "ea6cb8e6-64e7-4b50-8965-5aeee716adec",
+      "question": "What was the operating revenues for Q4 2019 for Bell Wireless? ",
+      "gold_answer": [
+        "2,493"
+      ],
+      "gold_scale": "million",
+      "status": "needs_resolution",
+      "blocking_issue": "Gold uses million, but the revenue table and caption do not explicitly state that scale. Other million-denominated figures do not establish this table's units. Replace with a supported percentage lookup or resolve source units explicitly.",
+      "warning": null,
+      "verified_basis": "Bell Wireless Q4 2019, table value 2493; million scale is not explicit in supplied table/caption",
+      "verified_value": 2493,
+      "reference_response": {
+        "answer": 2493,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-2",
+        "paragraph-6"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    },
+    {
+      "id": "E25-arithmetic",
+      "source_question_id": "a4308d65-606f-4563-94e1-5ff5c049051a",
+      "question": "What is the sum of the operating revenues for Bell Wireless in Q4 2019 and 2018?",
+      "gold_answer": 4900,
+      "gold_scale": "million",
+      "status": "needs_resolution",
+      "blocking_issue": "Sum 4900 is verified, but its million scale is not explicit in the supplied revenue table/caption. A percentage-of-total question avoids this missing scale requirement.",
+      "warning": null,
+      "verified_basis": "2407+2493",
+      "verified_value": 4900,
+      "reference_response": {
+        "answer": 4900,
+        "scale": "million"
+      },
+      "reference_exact_match": 1.0,
+      "reference_literal_scale_correct": true,
+      "retrieved_chunk_ids": [
+        "paragraph-2",
+        "paragraph-6"
+      ],
+      "required_chunk": "table",
+      "evidence_retrieved": false
+    }
+  ]
+}

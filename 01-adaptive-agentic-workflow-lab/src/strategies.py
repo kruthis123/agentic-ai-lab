@@ -3,6 +3,10 @@ from src.retrieval import TfidfRetriever, retriever as default_retriever
 
 import time
 
+def token_sum(*counts):
+    # Missing provider usage is unknown, not zero or an answer failure.
+    return None if any(count is None for count in counts) else sum(counts)
+
 def run_adaptive(
     question: str,
     answer_type: str,
@@ -22,15 +26,9 @@ def run_adaptive(
     )
     end = time.perf_counter()
 
-    total_input_tokens = (
-        route.input_tokens
-        + result.input_tokens
-    )
-    total_output_tokens = (
-        route.output_tokens
-        + result.output_tokens
-    )
-    total_tokens = total_input_tokens + total_output_tokens
+    total_input_tokens = token_sum(route.input_tokens, result.input_tokens)
+    total_output_tokens = token_sum(route.output_tokens, result.output_tokens)
+    total_tokens = token_sum(total_input_tokens, total_output_tokens)
     total_latency_ms = (end - start) * 1000
 
     return {
@@ -44,11 +42,11 @@ def run_adaptive(
         "latency_ms": total_latency_ms,
         "router_input_tokens": route.input_tokens,
         "router_output_tokens": route.output_tokens,
-        "router_total_tokens": route.input_tokens + route.output_tokens,
+        "router_total_tokens": token_sum(route.input_tokens, route.output_tokens),
         "router_latency_ms": (execution_start - start) * 1000,
         "execution_input_tokens": result.input_tokens,
         "execution_output_tokens": result.output_tokens,
-        "execution_total_tokens": result.input_tokens + result.output_tokens,
+        "execution_total_tokens": token_sum(result.input_tokens, result.output_tokens),
         "execution_latency_ms": (end - execution_start) * 1000,
     }
 
@@ -85,7 +83,7 @@ def run_fixed(
         "needs_reasoning": needs_reasoning,
         "input_tokens": result.input_tokens,
         "output_tokens": result.output_tokens,
-        "total_tokens": result.input_tokens + result.output_tokens,
+        "total_tokens": token_sum(result.input_tokens, result.output_tokens),
         "latency_ms": (end - start) * 1000,
         "router_input_tokens": 0,
         "router_output_tokens": 0,
@@ -93,7 +91,7 @@ def run_fixed(
         "router_latency_ms": 0.0,
         "execution_input_tokens": result.input_tokens,
         "execution_output_tokens": result.output_tokens,
-        "execution_total_tokens": result.input_tokens + result.output_tokens,
+        "execution_total_tokens": token_sum(result.input_tokens, result.output_tokens),
         "execution_latency_ms": (end - start) * 1000,
     }
 
